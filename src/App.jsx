@@ -221,8 +221,10 @@ function FoodCharmPage() {
           />
           <dl className="food-project-meta">
             <div><dt>My contribution</dt><dd>Designer</dd></div>
+            <div><dt>Duration</dt><dd>1.5 months</dd></div>
             <div><dt>Team</dt><dd>5 people</dd></div>
             <div><dt>Project context</dt><dd>University project</dd></div>
+            <div><dt>Project type</dt><dd>UX/UI food-sharing concept</dd></div>
           </dl>
         </header>
 
@@ -542,8 +544,9 @@ function FoodCharmPage() {
         </section>
 
         <nav className="food-case-pagination" aria-label="Project navigation">
-          <a href={sitePath('/projects')}>← All projects</a>
-          <a href={sitePath('/projects/vr-museum')}>Next project <ArrowIcon /></a>
+          <a href={sitePath('/projects')}>All projects</a>
+          <a href={sitePath('/projects/posterpal')}>Next project: PosterPal</a>
+          <a href="#top">Back to top</a>
         </nav>
       </main>
       <Footer />
@@ -694,6 +697,7 @@ function PosterPalPage() {
               <div><dt>Duration</dt><dd>1.5 months</dd></div>
               <div><dt>Team</dt><dd>4 people</dd></div>
               <div><dt>Context</dt><dd>University Project</dd></div>
+              <div><dt>Project type</dt><dd>Human-Centered AI design</dd></div>
             </dl>
           </div>
           <div className="poster-hero-product" aria-label="PosterPal interface previews">
@@ -1012,8 +1016,9 @@ function PosterPalPage() {
         </section>
 
         <nav className="food-case-pagination poster-case-pagination" aria-label="Project navigation">
-          <a href={sitePath('/projects')}>← All projects</a>
-          <a href={sitePath('/projects/zen-rooms')}>Next project <ArrowIcon /></a>
+          <a href={sitePath('/projects')}>All projects</a>
+          <a href={sitePath('/projects/zen-rooms')}>Next project: Zen Rooms</a>
+          <a href="#top">Back to top</a>
         </nav>
       </main>
       {zoom && (
@@ -1070,9 +1075,10 @@ function ZenRoomsPage() {
             </div>
             <dl className="zen-hero-meta">
               <div><dt>My contribution</dt><dd>Library Room</dd></div>
-              <div><dt>Role</dt><dd>Interaction design &amp; VR implementation</dd></div>
-              <div><dt>Context</dt><dd>M1 HCI · Université Paris-Saclay</dd></div>
-              <div><dt>Project date</dt><dd>February 2026</dd></div>
+              <div><dt>Role</dt><dd>Developer / designer</dd></div>
+              <div><dt>Context</dt><dd>University project</dd></div>
+              <div><dt>Tools</dt><dd>Unity, Blender</dd></div>
+              <div><dt>Project type</dt><dd>Immersive VR experience</dd></div>
             </dl>
           </div>
           <figure className="zen-hero-image" style={{ "--zen-hero-background": `url("${publicAsset('/images/ZenRooms/preview.png')}")` }}>
@@ -1332,9 +1338,9 @@ function ZenRoomsPage() {
         </section>
 
         <nav className="food-case-pagination zen-pagination" aria-label="Project navigation">
-          <a href={sitePath('/projects')}>← All projects</a>
-          <a href={sitePath('/projects/zoom-promax')}>Next project <ArrowIcon /></a>
-          <a href="#zen-top">Back to top ↑</a>
+          <a href={sitePath('/projects')}>All projects</a>
+          <a href={sitePath('/projects/mylibrary')}>Next project: MyLibrary</a>
+          <a href="#zen-top">Back to top</a>
         </nav>
       </main>
       <Footer />
@@ -1370,7 +1376,7 @@ function ZoomProMaxPage() {
         <header className="food-case-hero zpm-hero">
           <div className="food-case-heading">
             <p className="eyebrow">UX/UI · COMMUNICATION · INTERACTION DESIGN</p>
-            <h1>Zoom<span>ProMax</span></h1>
+            <h1>Zoom<span>EvenMore</span></h1>
             <p className="food-case-lede">A redesign of the video-meeting experience that makes it more personal, flexible, and adaptable to how each person follows a conversation.</p>
           </div>
           <div className="zpm-hero-visual">
@@ -1387,7 +1393,8 @@ function ZoomProMaxPage() {
             <div><dt>Team</dt><dd>3 people</dd></div>
             <div><dt>Project type</dt><dd>Interaction design &amp; prototyping</dd></div>
             <div><dt>Tools</dt><dd>Figma</dd></div>
-            <div><dt>Deliverables</dt><dd>Interactive prototype · scenario video</dd></div>
+            <div><dt>Context</dt><dd>University project</dd></div>
+            <div><dt>Duration</dt><dd>1.5 months</dd></div>
           </dl>
         </header>
 
@@ -1505,8 +1512,9 @@ function ZoomProMaxPage() {
         </section>
 
         <nav className="food-case-pagination" aria-label="Project navigation">
-          <a href={sitePath('/projects')}>← All projects</a>
-          <a href={sitePath('/projects/ar-garden')}>Next project <ArrowIcon /></a>
+          <a href={sitePath('/projects')}>All projects</a>
+          <a href={sitePath('/projects/chorify')}>Next project: Chorify</a>
+          <a href="#top">Back to top</a>
         </nav>
       </main>
       <Footer />
@@ -1657,10 +1665,10 @@ function MyLibraryPage() {
           <div className="ml-hero-intro">
             <p>MyLibrary is a personal and social reading experience. It helps readers organize their books, track their progress, keep their thoughts, and connect with other readers.</p>
             <dl className="ml-meta">
-              <div><dt>Type</dt><dd>Product &amp; interface design</dd></div>
+              <div><dt>Project type</dt><dd>Product &amp; interface design</dd></div>
               <div><dt>Role</dt><dd>Designer</dd></div>
               <div><dt>Tools</dt><dd>Figma</dd></div>
-              <div><dt>Deliverable</dt><dd>Interface design and prototype</dd></div>
+              <div><dt>Context</dt><dd>University project</dd></div>
             </dl>
           </div>
           <figure className="ml-hero-visual">
@@ -1837,8 +1845,9 @@ function MyLibraryPage() {
         </section>
 
         <nav className="food-case-pagination" aria-label="Project navigation">
-          <a href={sitePath('/projects')}>← All projects</a>
-          <a href={sitePath('/projects/posterpal')}>Next project <ArrowIcon /></a>
+          <a href={sitePath('/projects')}>All projects</a>
+          <a href={sitePath('/projects/zoom-promax')}>Next project: ZoomEvenMore</a>
+          <a href="#top">Back to top</a>
         </nav>
       </main>
       <Footer />
@@ -1860,6 +1869,7 @@ const chNav = [
 ]
 
 const chInfo = [
+  ['Project type', 'Phygital chore management system'],
   ['Context', 'University project'],
   ['Role', 'Designer, Researcher'],
   ['Team', '3 designers'],
@@ -1965,13 +1975,13 @@ function ChorifyPage() {
             <span className="ch-hero-blob ch-hero-blob--purple" aria-hidden="true" />
             <img src={publicAsset('/images/Chorify/homepage.png')} alt="Chorify home screen on a phone, showing today’s task, shortcuts, weekly progress and recent activity" width="948" height="1659" fetchPriority="high" />
           </figure>
-        </header>
 
         <dl className="ch-info">
           {chInfo.map(([label, value]) => (
             <div key={label}><dt>{label}</dt><dd>{value}</dd></div>
           ))}
         </dl>
+        </header>
 
         <SectionNav items={chNav} theme="snav--chorify" />
 
@@ -2016,9 +2026,9 @@ function ChorifyPage() {
         <ChPaperSection />
 
         <nav className="food-case-pagination ch-pagination" aria-label="Project navigation">
-          <a href={sitePath('/projects')}>← All projects</a>
-          <a href={sitePath('/projects/mylibrary')}>Next project <ArrowIcon /></a>
-          <a href="#top">Back to top ↑</a>
+          <a href={sitePath('/projects')}>All projects</a>
+          <a href={sitePath('/projects/vr-museum')}>Next project: VR Museum</a>
+          <a href="#top">Back to top</a>
         </nav>
       </main>
       {zoom && (

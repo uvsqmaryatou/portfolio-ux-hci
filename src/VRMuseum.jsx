@@ -105,6 +105,7 @@ export default function VRMuseumPage() {
               <div><dt>Role</dt><dd>Designer / developer</dd></div>
               <div><dt>Duration</dt><dd>1.5 months</dd></div>
               <div><dt>Tools</dt><dd>Unity</dd></div>
+              <div><dt>Project type</dt><dd>Virtual reality museum</dd></div>
             </dl>
             <div className="museum-tags" aria-label="Project disciplines">
               <span>Unity</span><span>Virtual Reality</span><span>3D Environment Design</span>
@@ -261,7 +262,7 @@ export default function VRMuseumPage() {
 
         <nav className="food-case-pagination museum-pagination" aria-label="Project navigation">
           <a href={sitePath('/projects')}>All projects</a>
-          <a href={sitePath('/projects/zoom-promax')}>Next project: ZoomEvenMore</a>
+          <a href={sitePath('/projects/ar-garden')}>Next project: AR Garden</a>
           <a href="#museum-top">Back to top</a>
         </nav>
       </main>

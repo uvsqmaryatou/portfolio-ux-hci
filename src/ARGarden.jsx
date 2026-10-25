@@ -109,11 +109,12 @@ export default function ARGardenPage() {
               <span>Unity</span><span>Vuforia</span><span>AR</span><span>Interactive Experience</span>
             </div>
             <dl className="ar-garden-meta">
-              <div><dt>My contribution</dt><dd>Designer</dd></div>
+              <div><dt>Role</dt><dd>Designer / developer</dd></div>
               <div><dt>Context</dt><dd>University project</dd></div>
               <div><dt>Duration</dt><dd>1.5 months</dd></div>
               <div><dt>Tools</dt><dd>Unity, Vuforia</dd></div>
               <div><dt>Team</dt><dd>2 people</dd></div>
+              <div><dt>Project type</dt><dd>Augmented reality experience</dd></div>
             </dl>
           </div>
           <figure className="ar-garden-hero-image">
@@ -205,7 +206,7 @@ export default function ARGardenPage() {
 
         <nav className="food-case-pagination ar-garden-pagination" aria-label="Project navigation">
           <a href={sitePath('/projects')}>All projects</a>
-          <a href={sitePath('/projects/chorify')}>Next project: Chorify</a>
+          <a href={sitePath('/projects/food-charm')}>Next project: Food Charm</a>
           <a href="#ar-garden-top">Back to top</a>
         </nav>
       </main>

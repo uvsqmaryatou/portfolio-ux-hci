@@ -1,4 +1,6 @@
-﻿import { useEffect, useRef, useState } from 'react'
+﻿import { publicAsset } from './publicAsset.js'
+import { sitePath } from './sitePath.js'
+import { useEffect, useRef, useState } from 'react'
 import './App.css'
 import './PosterPal.css'
 import './ZenRooms.css'
@@ -32,7 +34,7 @@ function FoodDimensionsDiagram() {
         <div className="food-digital-diagram-image">
           <img
             id="food-digital-diagram-image"
-            src="/images/FoodCharm/diagram_vrai.png"
+            src={publicAsset('/images/FoodCharm/diagram_vrai.png')}
             alt="Food Charm design dimensions diagram. It compares keychain and fridge concepts across system trigger, input technology, user-centric giving, degree of communication, urgency of communication, and simplicity of locating."
             width="1536"
             height="1024"
@@ -55,7 +57,7 @@ function FoodDimensionsDiagram() {
       <figure className={`food-paper-diagram${paperExpanded ? ' food-paper-diagram--expanded' : ''}`}>
         <img
           id="food-paper-diagram-image"
-          src="/images/FoodCharm/diagram_papier.png"
+          src={publicAsset('/images/FoodCharm/diagram_papier.png')}
           alt="Photograph of the original handwritten paper version of the Food Charm design-dimensions diagram"
           width="535"
           height="539"
@@ -202,7 +204,7 @@ function FoodCharmPage() {
       <SiteHeader projectsPage />
       <main className="food-charm-page">
         <nav className="case-breadcrumb" aria-label="Breadcrumb">
-          <a href="/">Home</a><span aria-hidden="true">/</span><a href="/projects">Projects</a><span aria-hidden="true">/</span><span aria-current="page">Food Charm</span>
+          <a href={sitePath('/')}>Home</a><span aria-hidden="true">/</span><a href={sitePath('/projects')}>Projects</a><span aria-hidden="true">/</span><span aria-current="page">Food Charm</span>
         </nav>
 
         <header className="food-case-hero">
@@ -213,7 +215,7 @@ function FoodCharmPage() {
           </div>
           <img
             className="food-case-banner"
-            src="/images/FoodCharm/banner.png"
+            src={publicAsset('/images/FoodCharm/banner.png')}
             alt="Food Charm keychain concept with a nearby food-sharing alert and community food locker"
             fetchPriority="high"
           />
@@ -331,7 +333,7 @@ function FoodCharmPage() {
             <div className="food-persona-grid">
               <article className="food-persona-card">
                 <span className="food-persona-number">01 / DONOR</span>
-                <img className="food-persona-image" src="/images/PosterPal/richie.png" alt="Portrait representing Richie, a student with surplus food to share" />
+                <img className="food-persona-image" src={publicAsset('/images/PosterPal/richie.png')} alt="Portrait representing Richie, a student with surplus food to share" />
                 <h3>Richie</h3>
                 <p className="food-persona-role">A well-off student</p>
                 <p>Richie does not struggle to afford food and tends to buy more than he needs. As a result, some of his food goes bad before he can eat it.</p>
@@ -339,7 +341,7 @@ function FoodCharmPage() {
               </article>
               <article className="food-persona-card food-persona-card--highlight">
                 <span className="food-persona-number">02 / RECIPIENT</span>
-                <img className="food-persona-image" src="/images/PosterPal/Brooke.png" alt="Portrait representing Brooke, a student looking for affordable food nearby" />
+                <img className="food-persona-image" src={publicAsset('/images/PosterPal/Brooke.png')} alt="Portrait representing Brooke, a student looking for affordable food nearby" />
                 <h3>Brooke</h3>
                 <p className="food-persona-role">An extreme student persona</p>
                 <p>Brooke represents a student who does not have enough money to afford food throughout every month. This extreme persona helps keep affordability and access in focus.</p>
@@ -347,7 +349,7 @@ function FoodCharmPage() {
               </article>
               <article className="food-persona-card">
                 <span className="food-persona-number">03 / DONOR</span>
-                <img className="food-persona-image" src="/images/PosterPal/lucc.png" alt="Portrait representing Luc, a restaurant owner with end-of-day surplus food" />
+                <img className="food-persona-image" src={publicAsset('/images/PosterPal/lucc.png')} alt="Portrait representing Luc, a restaurant owner with end-of-day surplus food" />
                 <h3>Luc</h3>
                 <p className="food-persona-role">A restaurant owner</p>
                 <p>Luc has surplus food at the end of the day and needs a practical way to let people nearby know it is available.</p>
@@ -394,7 +396,7 @@ function FoodCharmPage() {
               <figure className="food-prototype-card food-prototype-card--fridge">
                 <div className="food-prototype-image-wrap">
                   <img
-                    src="/images/FoodCharm/image.png"
+                    src={publicAsset('/images/FoodCharm/image.png')}
                     alt="Paper prototype of a smart fridge food-sharing interface attached to a refrigerator"
                     loading="lazy"
                   />
@@ -420,7 +422,7 @@ function FoodCharmPage() {
                 <div className="food-keychain-prototypes">
                   <figure>
                     <img
-                      src="/images/FoodCharm/keychain_foodalert.png"
+                      src={publicAsset('/images/FoodCharm/keychain_foodalert.png')}
                       alt="Handmade paper keychain prototype showing a new food alert"
                       loading="lazy"
                     />
@@ -428,7 +430,7 @@ function FoodCharmPage() {
                   </figure>
                   <figure>
                     <img
-                      src="/images/FoodCharm/keychain_scan.png"
+                      src={publicAsset('/images/FoodCharm/keychain_scan.png')}
                       alt="Paper prototype exploring how the Food Charm keychain scans or identifies shared food"
                       loading="lazy"
                     />
@@ -445,7 +447,7 @@ function FoodCharmPage() {
                 <p>The storyboard follows the first direction: the fridge detects food, alerts the user, shares details and lets them upload an item to the system.</p>
               </figcaption>
               <img
-                src="/images/FoodCharm/fridge_sb.png"
+                src={publicAsset('/images/FoodCharm/fridge_sb.png')}
                 alt="Four-frame smart-fridge storyboard: the fridge detects food, sends an alert, shows food details and expiration, and lets the user upload the food"
                 loading="lazy"
               />
@@ -478,7 +480,7 @@ function FoodCharmPage() {
           <div className="food-section-content food-participatory-content">
             <figure className="food-workshop-instructions">
               <img
-                src="/images/FoodCharm/pd_instructions.png"
+                src={publicAsset('/images/FoodCharm/pd_instructions.png')}
                 alt="Participatory design workshop instructions showing two activities: customize a paper keychain and debate keychain versus app and centralized pickup versus peer-to-peer exchange"
                 loading="lazy"
               />
@@ -524,7 +526,7 @@ function FoodCharmPage() {
                 <p>The final storyboard shows the keychain experience end to end: finding a locker, scanning its QR code, receiving a nearby-food alert, collecting food and connecting with other food-sharing neighbours.</p>
               </figcaption>
               <img
-                src="/images/FoodCharm/kc_sb.png"
+                src={publicAsset('/images/FoodCharm/kc_sb.png')}
                 alt="Eight-frame Food Charm storyboard showing Richie finding a locker and scanning its QR code, Brooke receiving a nearby-food alert and collecting food, and the two becoming food-friends"
                 loading="lazy"
               />
@@ -532,7 +534,7 @@ function FoodCharmPage() {
             <h3 className="food-final-flow-title">The keychain interaction, step by step</h3>
             <img
               className="food-transition-image"
-              src="/images/FoodCharm/steps.png"
+              src={publicAsset('/images/FoodCharm/steps.png')}
               alt="Five-step Food Charm interaction journey, from connecting keychains in proximity through collecting food from a locker"
               loading="lazy"
             />
@@ -540,8 +542,8 @@ function FoodCharmPage() {
         </section>
 
         <nav className="food-case-pagination" aria-label="Project navigation">
-          <a href="/projects">← All projects</a>
-          <a href="/projects/vr-museum">Next project <ArrowIcon /></a>
+          <a href={sitePath('/projects')}>← All projects</a>
+          <a href={sitePath('/projects/vr-museum')}>Next project <ArrowIcon /></a>
         </nav>
       </main>
       <Footer />
@@ -552,7 +554,7 @@ function FoodCharmPage() {
 const posterAssets = {
   paperPrototype: [
     {
-      image: '/images/PosterPal/pp1.jpeg',
+      image: publicAsset('/images/PosterPal/pp1.jpeg'),
       aspectRatio: '655 / 921',
       alt: 'Paper prototype photo of the Mood Board screen, showing Basic Information, Related Files, and Crucial Information',
       label: '01 — Define',
@@ -560,7 +562,7 @@ const posterAssets = {
       captionRest: 'project context, references, and essential poster information.',
     },
     {
-      image: '/images/PosterPal/pp2.jpeg',
+      image: publicAsset('/images/PosterPal/pp2.jpeg'),
       aspectRatio: '1565 / 1096',
       alt: 'Paper prototype photo of the Visual Elements screen with hand-drawn asset cards',
       label: '02 — Curate',
@@ -568,7 +570,7 @@ const posterAssets = {
       captionRest: 'and select visual assets for the composition.',
     },
     {
-      image: '/images/PosterPal/pp3.jpeg',
+      image: publicAsset('/images/PosterPal/pp3.jpeg'),
       aspectRatio: '1536 / 1102',
       alt: 'Paper prototype photo of a hand moving a cut-out visual element onto the poster canvas',
       label: '03 — Manipulate',
@@ -576,7 +578,7 @@ const posterAssets = {
       captionRest: 'direct manipulation by moving individual elements onto the canvas.',
     },
     {
-      image: '/images/PosterPal/pp4.jpeg',
+      image: publicAsset('/images/PosterPal/pp4.jpeg'),
       aspectRatio: '1599 / 1124',
       alt: 'Paper prototype photo of the assembled “Donate, They Need You” poster with several visual elements',
       label: '04 — Compose',
@@ -585,15 +587,15 @@ const posterAssets = {
     },
   ],
   screens: [
-    { id: '01', title: 'Home / Dashboard', description: 'Start a new poster or return to recent projects.', image: '/images/PosterPal/Homepage.png', alt: 'PosterPal home dashboard with a clothes donation drive project and poster templates' },
-    { id: '02', title: 'Project Setup', description: 'Set the event details and audience for the charity poster.', image: '/images/PosterPal/project%20setup.png', alt: 'PosterPal project setup form for a clothes donation drive, with suggested styles and event details' },
-    { id: '03', title: 'Moodboard', description: 'Gather visual references and choose a style direction.', image: '/images/PosterPal/Moodboard%20de%20don%20de%20v%C3%AAtements.png', alt: 'PosterPal clothes donation drive moodboard with visual inspiration, colors, and style options' },
-    { id: '04', title: 'Asset Library', description: 'Browse photos, illustrations, icons, and shapes.', image: '/images/PosterPal/asset_library.png', alt: 'PosterPal asset library showing clothing photos, illustrations, icons, and shapes' },
-    { id: '05', title: 'Main Poster Editor', description: 'Open the editor and work directly on the poster canvas.', image: '/images/PosterPal/main_poster_edit.png', alt: 'PosterPal poster editor with an empty canvas, design controls, and asset tools' },
-    { id: '06', title: 'Refine Poster Text', description: 'Adjust the headline and other design details.', image: '/images/PosterPal/interface%20making.png', alt: 'PosterPal editor with the clothes donation poster and headline text editing controls' },
-    { id: '07', title: 'Add Elements to the Canvas', description: 'Bring selected visual assets onto the poster.', image: '/images/PosterPal/elements_on_img.png', alt: 'PosterPal editor showing a clothing image being placed onto the poster canvas' },
-    { id: '08', title: 'AI Editing with Generated Alternatives', description: 'Compare AI-generated versions and refine the design.', image: '/images/PosterPal/AI_talking.png', alt: 'PosterPal AI editing view with generated poster alternatives and refinement suggestions' },
-    { id: '09', title: 'AI Assistant Chat', description: 'Explore poster changes through a conversation with the assistant.', image: '/images/PosterPal/talking%20to%20AI.png', alt: 'PosterPal AI assistant chat alongside the clothes donation poster' },
+    { id: '01', title: 'Home / Dashboard', description: 'Start a new poster or return to recent projects.', image: publicAsset('/images/PosterPal/Homepage.png'), alt: 'PosterPal home dashboard with a clothes donation drive project and poster templates' },
+    { id: '02', title: 'Project Setup', description: 'Set the event details and audience for the charity poster.', image: publicAsset('/images/PosterPal/project%20setup.png'), alt: 'PosterPal project setup form for a clothes donation drive, with suggested styles and event details' },
+    { id: '03', title: 'Moodboard', description: 'Gather visual references and choose a style direction.', image: publicAsset('/images/PosterPal/Moodboard%20de%20don%20de%20v%C3%AAtements.png'), alt: 'PosterPal clothes donation drive moodboard with visual inspiration, colors, and style options' },
+    { id: '04', title: 'Asset Library', description: 'Browse photos, illustrations, icons, and shapes.', image: publicAsset('/images/PosterPal/asset_library.png'), alt: 'PosterPal asset library showing clothing photos, illustrations, icons, and shapes' },
+    { id: '05', title: 'Main Poster Editor', description: 'Open the editor and work directly on the poster canvas.', image: publicAsset('/images/PosterPal/main_poster_edit.png'), alt: 'PosterPal poster editor with an empty canvas, design controls, and asset tools' },
+    { id: '06', title: 'Refine Poster Text', description: 'Adjust the headline and other design details.', image: publicAsset('/images/PosterPal/interface%20making.png'), alt: 'PosterPal editor with the clothes donation poster and headline text editing controls' },
+    { id: '07', title: 'Add Elements to the Canvas', description: 'Bring selected visual assets onto the poster.', image: publicAsset('/images/PosterPal/elements_on_img.png'), alt: 'PosterPal editor showing a clothing image being placed onto the poster canvas' },
+    { id: '08', title: 'AI Editing with Generated Alternatives', description: 'Compare AI-generated versions and refine the design.', image: publicAsset('/images/PosterPal/AI_talking.png'), alt: 'PosterPal AI editing view with generated poster alternatives and refinement suggestions' },
+    { id: '09', title: 'AI Assistant Chat', description: 'Explore poster changes through a conversation with the assistant.', image: publicAsset('/images/PosterPal/talking%20to%20AI.png'), alt: 'PosterPal AI assistant chat alongside the clothes donation poster' },
   ],
 }
 
@@ -678,7 +680,7 @@ function PosterPalPage() {
       <SiteHeader projectsPage />
       <main className="food-charm-page posterpal-page" onClick={handleZoomClick}>
         <nav className="case-breadcrumb" aria-label="Breadcrumb">
-          <a href="/">Home</a><span aria-hidden="true">/</span><a href="/projects">Projects</a><span aria-hidden="true">/</span><span aria-current="page">PosterPal</span>
+          <a href={sitePath('/')}>Home</a><span aria-hidden="true">/</span><a href={sitePath('/projects')}>Projects</a><span aria-hidden="true">/</span><span aria-current="page">PosterPal</span>
         </nav>
 
         <header className="poster-hero">
@@ -697,7 +699,7 @@ function PosterPalPage() {
           <div className="poster-hero-product" aria-label="PosterPal interface previews">
             <figure className="poster-hero-visual poster-hero-visual--editor">
               <img
-                src="/images/PosterPal/interface%20making.png"
+                src={publicAsset('/images/PosterPal/interface%20making.png')}
                 alt="PosterPal poster editor showing the clothes donation poster on its canvas with editing controls"
                 fetchPriority="high"
               />
@@ -705,7 +707,7 @@ function PosterPalPage() {
             </figure>
             <figure className="poster-hero-visual poster-hero-visual--assets">
               <img
-                src="/images/PosterPal/asset_library.png"
+                src={publicAsset('/images/PosterPal/asset_library.png')}
                 alt="PosterPal asset library with clothing photos, illustrations, icons, and shapes"
                 fetchPriority="high"
               />
@@ -973,7 +975,7 @@ function PosterPalPage() {
               <figure>
                 <div className="poster-interface-evidence-image">
                   <img
-                    src="/images/PosterPal/asset_library.png"
+                    src={publicAsset('/images/PosterPal/asset_library.png')}
                     alt="PosterPal asset library with photos, illustrations, icons, and shapes"
                     loading="lazy"
                   />
@@ -983,7 +985,7 @@ function PosterPalPage() {
               <figure>
                 <div className="poster-interface-evidence-image">
                   <img
-                    src="/images/PosterPal/interface%20making.png"
+                    src={publicAsset('/images/PosterPal/interface%20making.png')}
                     alt="PosterPal editor showing a clothes donation poster with text-editing controls"
                     loading="lazy"
                   />
@@ -1010,8 +1012,8 @@ function PosterPalPage() {
         </section>
 
         <nav className="food-case-pagination poster-case-pagination" aria-label="Project navigation">
-          <a href="/projects">← All projects</a>
-          <a href="/projects/zen-rooms">Next project <ArrowIcon /></a>
+          <a href={sitePath('/projects')}>← All projects</a>
+          <a href={sitePath('/projects/zen-rooms')}>Next project <ArrowIcon /></a>
         </nav>
       </main>
       {zoom && (
@@ -1034,10 +1036,10 @@ const zenExperienceSteps = [
 ]
 
 const zenGalleryItems = [
-  ['/images/ZenRooms/room.png', 'The Library Room in VR'],
-  ['/images/ZenRooms/emotion_bos.png', 'The emotion box'],
-  ['/images/ZenRooms/anxiety_cards.png', 'The anxiety cards'],
-  ['/images/ZenRooms/virtual_guide.png', 'The virtual guide'],
+  [publicAsset('/images/ZenRooms/room.png'), 'The Library Room in VR'],
+  [publicAsset('/images/ZenRooms/emotion_bos.png'), 'The emotion box'],
+  [publicAsset('/images/ZenRooms/anxiety_cards.png'), 'The anxiety cards'],
+  [publicAsset('/images/ZenRooms/virtual_guide.png'), 'The virtual guide'],
 ]
 
 const zenImplementationItems = [
@@ -1054,7 +1056,7 @@ function ZenRoomsPage() {
       <SiteHeader projectsPage />
       <main className="zen-rooms-page">
         <nav className="case-breadcrumb" aria-label="Breadcrumb">
-          <a href="/">Home</a><span aria-hidden="true">/</span><a href="/projects">Projects</a><span aria-hidden="true">/</span><span aria-current="page">Zen Rooms</span>
+          <a href={sitePath('/')}>Home</a><span aria-hidden="true">/</span><a href={sitePath('/projects')}>Projects</a><span aria-hidden="true">/</span><span aria-current="page">Zen Rooms</span>
         </nav>
 
         <header className="zen-hero" id="zen-top">
@@ -1073,9 +1075,9 @@ function ZenRoomsPage() {
               <div><dt>Project date</dt><dd>February 2026</dd></div>
             </dl>
           </div>
-          <figure className="zen-hero-image">
+          <figure className="zen-hero-image" style={{ "--zen-hero-background": `url("${publicAsset('/images/ZenRooms/preview.png')}")` }}>
             <img
-              src="/images/ZenRooms/preview.png"
+              src={publicAsset('/images/ZenRooms/preview.png')}
               alt="Preview image for the Zen Rooms virtual-reality project"
               fetchPriority="high"
             />
@@ -1147,7 +1149,7 @@ function ZenRoomsPage() {
                   controls
                   preload="metadata"
                 >
-                  <source src="/images/ZenRooms/papers.mp4" type="video/mp4" />
+                  <source src={publicAsset('/images/ZenRooms/papers.mp4')} type="video/mp4" />
                   Your browser does not support embedded video.
                 </video>
                 <figcaption>
@@ -1171,15 +1173,15 @@ function ZenRoomsPage() {
               <div className="zen-stress-visual" role="group" aria-label="Three visual states of the stress sphere">
                 <div className="zen-stress-states">
                   <figure className="zen-stress-state zen-stress-state--green">
-                    <img src="/images/ZenRooms/vert.png" alt="Green sphere in the Library Room" />
+                    <img src={publicAsset('/images/ZenRooms/vert.png')} alt="Green sphere in the Library Room" />
                     <figcaption><span>01</span><strong>Lower</strong><small>Calm</small></figcaption>
                   </figure>
                   <figure className="zen-stress-state zen-stress-state--yellow">
-                    <img src="/images/ZenRooms/jaune.png" alt="Yellow sphere in the Library Room" />
+                    <img src={publicAsset('/images/ZenRooms/jaune.png')} alt="Yellow sphere in the Library Room" />
                     <figcaption><span>02</span><strong>Moderate</strong><small>Intermediate</small></figcaption>
                   </figure>
                   <figure className="zen-stress-state zen-stress-state--red">
-                    <img src="/images/ZenRooms/rouge.png" alt="Red sphere in the Library Room" />
+                    <img src={publicAsset('/images/ZenRooms/rouge.png')} alt="Red sphere in the Library Room" />
                     <figcaption><span>03</span><strong>Higher</strong><small>More intense</small></figcaption>
                   </figure>
                 </div>
@@ -1207,7 +1209,7 @@ function ZenRoomsPage() {
                     controls
                     preload="metadata"
                   >
-                    <source src="/images/ZenRooms/virtual_guide.mp4" type="video/mp4" />
+                    <source src={publicAsset('/images/ZenRooms/virtual_guide.mp4')} type="video/mp4" />
                     Your browser does not support embedded video.
                   </video>
                   <figcaption>
@@ -1221,19 +1223,19 @@ function ZenRoomsPage() {
                 </figure>
                 <div className="zen-guide-expressions" aria-label="The guide's facial expressions and animation states">
                   <figure>
-                    <img src="/images/ZenRooms/idle.png" alt="The guide in an idle standing pose" />
+                    <img src={publicAsset('/images/ZenRooms/idle.png')} alt="The guide in an idle standing pose" />
                     <figcaption><strong>Idle</strong><span>Waiting presence</span></figcaption>
                   </figure>
                   <figure>
-                    <img src="/images/ZenRooms/clapping.png" alt="The guide clapping with a smile" />
+                    <img src={publicAsset('/images/ZenRooms/clapping.png')} alt="The guide clapping with a smile" />
                     <figcaption><strong>Clapping</strong><span>Encouragement</span></figcaption>
                   </figure>
                   <figure>
-                    <img src="/images/ZenRooms/neutral.png" alt="The guide with a neutral facial expression" />
+                    <img src={publicAsset('/images/ZenRooms/neutral.png')} alt="The guide with a neutral facial expression" />
                     <figcaption><strong>Neutral</strong><span>Listening</span></figcaption>
                   </figure>
                   <figure>
-                    <img src="/images/ZenRooms/smiling.png" alt="The guide smiling warmly" />
+                    <img src={publicAsset('/images/ZenRooms/smiling.png')} alt="The guide smiling warmly" />
                     <figcaption><strong>Smiling</strong><span>Reassurance</span></figcaption>
                   </figure>
                 </div>
@@ -1261,7 +1263,7 @@ function ZenRoomsPage() {
                   controls
                   preload="metadata"
                 >
-                  <source src="/images/ZenRooms/particles%20(1).mp4" type="video/mp4" />
+                  <source src={publicAsset('/images/ZenRooms/particles%20(1).mp4')} type="video/mp4" />
                   Your browser does not support embedded video.
                 </video>
                 <figcaption>The selected emotion papers disappear in a particle effect, marking the end of the interaction.</figcaption>
@@ -1330,8 +1332,8 @@ function ZenRoomsPage() {
         </section>
 
         <nav className="food-case-pagination zen-pagination" aria-label="Project navigation">
-          <a href="/projects">← All projects</a>
-          <a href="/projects/zoom-promax">Next project <ArrowIcon /></a>
+          <a href={sitePath('/projects')}>← All projects</a>
+          <a href={sitePath('/projects/zoom-promax')}>Next project <ArrowIcon /></a>
           <a href="#zen-top">Back to top ↑</a>
         </nav>
       </main>
@@ -1362,7 +1364,7 @@ function ZoomProMaxPage() {
       <SiteHeader projectsPage />
       <main className="food-charm-page zpm-page">
         <nav className="case-breadcrumb" aria-label="Breadcrumb">
-          <a href="/">Home</a><span aria-hidden="true">/</span><a href="/projects">Projects</a><span aria-hidden="true">/</span><span aria-current="page">ZoomEvenMore</span>
+          <a href={sitePath('/')}>Home</a><span aria-hidden="true">/</span><a href={sitePath('/projects')}>Projects</a><span aria-hidden="true">/</span><span aria-current="page">ZoomEvenMore</span>
         </nav>
 
         <header className="food-case-hero zpm-hero">
@@ -1373,11 +1375,11 @@ function ZoomProMaxPage() {
           </div>
           <div className="zpm-hero-visual">
             <figure>
-              <img src="/images/Zoom++/layout-resized.png" alt="ZoomEvenMore meeting window with a resized, personalized participant layout" width="520" height="342" fetchPriority="high" />
+              <img src={publicAsset('/images/Zoom++/layout-resized.png')} alt="ZoomEvenMore meeting window with a resized, personalized participant layout" width="520" height="342" fetchPriority="high" />
               <figcaption>Personalized participant layout</figcaption>
             </figure>
             <figure>
-              <img src="/images/Zoom++/agenda.png" alt="ZoomEvenMore meeting window with the built-in agenda on the right" width="535" height="370" fetchPriority="high" />
+              <img src={publicAsset('/images/Zoom++/agenda.png')} alt="ZoomEvenMore meeting window with the built-in agenda on the right" width="535" height="370" fetchPriority="high" />
               <figcaption>Built-in interactive agenda</figcaption>
             </figure>
           </div>
@@ -1437,7 +1439,7 @@ function ZoomProMaxPage() {
               <p>Each participant window becomes something the user can shape: resized, hidden, or pinned.</p>
             </div>
             <figure className="zpm-gesture-map">
-              <img src="/images/Zoom++/features.png" alt="Gesture map around a participant: swipe up to zoom in or out, down for mic on or off, left to hide, right to pin" width="1476" height="1065" loading="lazy" />
+              <img src={publicAsset('/images/Zoom++/features.png')} alt="Gesture map around a participant: swipe up to zoom in or out, down for mic on or off, left to hide, right to pin" width="1476" height="1065" loading="lazy" />
               <figcaption><strong>One gesture per action.</strong> Swiping a participant window in one of four directions triggers zoom, mic, hide, or pin.</figcaption>
             </figure>
             <div className="zpm-action-row zpm-action-row--four">
@@ -1448,12 +1450,12 @@ function ZoomProMaxPage() {
             <div className="zpm-steps-visual">
               <figure>
                 <span className="zpm-step-badge">1</span>
-                <img src="/images/Zoom++/layout-controls.png" alt="Directional controls around the main participant window for zoom, hide, pin, and microphone" width="532" height="357" loading="lazy" />
+                <img src={publicAsset('/images/Zoom++/layout-controls.png')} alt="Directional controls around the main participant window for zoom, hide, pin, and microphone" width="532" height="357" loading="lazy" />
                 <figcaption><strong>Controls on the window.</strong> A cross of directional controls appears around a participant, giving direct access to zoom, hide, pin, and microphone actions.</figcaption>
               </figure>
               <figure>
                 <span className="zpm-step-badge">2</span>
-                <img src="/images/Zoom++/layout-resized.png" alt="Meeting grid after the main participant window has been resized" width="520" height="342" loading="lazy" />
+                <img src={publicAsset('/images/Zoom++/layout-resized.png')} alt="Meeting grid after the main participant window has been resized" width="520" height="342" loading="lazy" />
                 <figcaption><strong>The grid adapts.</strong> Resizing the main window lets the other participants reflow into a larger, more readable grid.</figcaption>
               </figure>
             </div>
@@ -1469,11 +1471,11 @@ function ZoomProMaxPage() {
             </div>
             <div className="zpm-agenda-visual">
               <figure>
-                <img src="/images/Zoom++/agenda.png" alt="Meeting window with a timeline agenda panel listing presentation groups and breaks" width="535" height="370" loading="lazy" />
+                <img src={publicAsset('/images/Zoom++/agenda.png')} alt="Meeting window with a timeline agenda panel listing presentation groups and breaks" width="535" height="370" loading="lazy" />
                 <figcaption><strong>Agenda beside the call.</strong> A timeline lists each item with its time slot. A check mark flags the item already covered.</figcaption>
               </figure>
               <figure>
-                <img src="/images/Zoom++/agenda-delete.png" alt="Agenda item highlighted in red with a trash icon while being deleted" width="529" height="369" loading="lazy" />
+                <img src={publicAsset('/images/Zoom++/agenda-delete.png')} alt="Agenda item highlighted in red with a trash icon while being deleted" width="529" height="369" loading="lazy" />
                 <figcaption><strong>Direct manipulation.</strong> Items are handled in place: here an item is marked in red with a trash icon as it is being deleted.</figcaption>
               </figure>
             </div>
@@ -1493,8 +1495,8 @@ function ZoomProMaxPage() {
               <p>A scenario video walks through a student joining a class call and using both features in the Figma prototype.</p>
             </div>
             <figure className="zpm-video">
-              <video controls preload="metadata" poster="/images/Zoom++/scenario-title.jpg" aria-label="ZoomEvenMore prototype scenario walkthrough">
-                <source src="/images/Zoom++/zoompromax-scenario.mp4" type="video/mp4" />
+              <video controls preload="metadata" poster={publicAsset('/images/Zoom++/scenario-title.jpg')} aria-label="ZoomEvenMore prototype scenario walkthrough">
+                <source src={publicAsset('/images/Zoom++/zoompromax-scenario.mp4')} type="video/mp4" />
                 Your browser does not support embedded video.
               </video>
               <figcaption>Scenario walkthrough of the ZoomEvenMore prototype · about 2 minutes</figcaption>
@@ -1503,8 +1505,8 @@ function ZoomProMaxPage() {
         </section>
 
         <nav className="food-case-pagination" aria-label="Project navigation">
-          <a href="/projects">← All projects</a>
-          <a href="/projects/ar-garden">Next project <ArrowIcon /></a>
+          <a href={sitePath('/projects')}>← All projects</a>
+          <a href={sitePath('/projects/ar-garden')}>Next project <ArrowIcon /></a>
         </nav>
       </main>
       <Footer />
@@ -1556,7 +1558,7 @@ function MlCrop({ src, alt, x, y, w, h, iw = 1536 }) {
   return (
     <div className="ml-crop" style={{ aspectRatio: `${w} / ${h}` }}>
       <img
-        src={`/images/MyLibrary/${src}`}
+        src={publicAsset(`/images/MyLibrary/${src}`)}
         alt={alt}
         loading="lazy"
         style={{ width: `${(iw / w) * 100}%`, marginLeft: `${(-x / w) * 100}%`, marginTop: `${(-y / w) * 100}%` }}
@@ -1581,7 +1583,7 @@ function MlScreen({ number, title, role, src, alt, w, h, notes, className = '' }
         </ol>
       </div>
       <figure>
-        <img src={`/images/MyLibrary/${src}`} alt={alt} width={w} height={h} loading="lazy" />
+        <img src={publicAsset(`/images/MyLibrary/${src}`)} alt={alt} width={w} height={h} loading="lazy" />
       </figure>
     </article>
   )
@@ -1646,7 +1648,7 @@ function MyLibraryPage() {
       <SiteHeader projectsPage />
       <main className="food-charm-page ml-page">
         <nav className="case-breadcrumb" aria-label="Breadcrumb">
-          <a href="/">Home</a><span aria-hidden="true">/</span><a href="/projects">Projects</a><span aria-hidden="true">/</span><span aria-current="page">MyLibrary</span>
+          <a href={sitePath('/')}>Home</a><span aria-hidden="true">/</span><a href={sitePath('/projects')}>Projects</a><span aria-hidden="true">/</span><span aria-current="page">MyLibrary</span>
         </nav>
 
         <header className="ml-hero">
@@ -1662,7 +1664,7 @@ function MyLibraryPage() {
             </dl>
           </div>
           <figure className="ml-hero-visual">
-            <img src="/images/MyLibrary/homepage.png" alt="MyLibrary homepage with a welcome banner, current reads, want-to-read list, discovery, reading goal, and friends’ activity" width="1536" height="1024" fetchPriority="high" />
+            <img src={publicAsset('/images/MyLibrary/homepage.png')} alt="MyLibrary homepage with a welcome banner, current reads, want-to-read list, discovery, reading goal, and friends’ activity" width="1536" height="1024" fetchPriority="high" />
           </figure>
         </header>
 
@@ -1819,7 +1821,7 @@ function MyLibraryPage() {
           ]} />
 
           <figure className="ml-screen-wide">
-            <img src="/images/MyLibrary/discussion.png" alt="Shared reading page in two states: Discussion tab with page-tagged comments, and Progress tab with reading insights" width="2172" height="724" loading="lazy" />
+            <img src={publicAsset('/images/MyLibrary/discussion.png')} alt="Shared reading page in two states: Discussion tab with page-tagged comments, and Progress tab with reading insights" width="2172" height="724" loading="lazy" />
             <figcaption>
               <span>08</span>
               <h3>Discussion and reading progress</h3>
@@ -1835,8 +1837,8 @@ function MyLibraryPage() {
         </section>
 
         <nav className="food-case-pagination" aria-label="Project navigation">
-          <a href="/projects">← All projects</a>
-          <a href="/projects/posterpal">Next project <ArrowIcon /></a>
+          <a href={sitePath('/projects')}>← All projects</a>
+          <a href={sitePath('/projects/posterpal')}>Next project <ArrowIcon /></a>
         </nav>
       </main>
       <Footer />
@@ -1914,7 +1916,7 @@ function ChScreen({ screen }) {
         <p>{screen.interaction}</p>
       </div>
       <figure className={`ch-screen-figure ch-tone-${screen.tone}`}>
-        <img src={`/images/Chorify/${screen.src}`} alt={screen.alt} width={screen.w} height={screen.h} loading="lazy" />
+        <img src={publicAsset(`/images/Chorify/${screen.src}`)} alt={screen.alt} width={screen.w} height={screen.h} loading="lazy" />
       </figure>
     </article>
   )
@@ -1947,7 +1949,7 @@ function ChorifyPage() {
       <SiteHeader projectsPage />
       <main className="food-charm-page ch-page" onClick={handleZoomClick}>
         <nav className="case-breadcrumb" aria-label="Breadcrumb">
-          <a href="/">Home</a><span aria-hidden="true">/</span><a href="/projects">Projects</a><span aria-hidden="true">/</span><span aria-current="page">Chorify</span>
+          <a href={sitePath('/')}>Home</a><span aria-hidden="true">/</span><a href={sitePath('/projects')}>Projects</a><span aria-hidden="true">/</span><span aria-current="page">Chorify</span>
         </nav>
 
         <header className="ch-hero">
@@ -1961,7 +1963,7 @@ function ChorifyPage() {
           <figure className="ch-hero-phone">
             <span className="ch-hero-blob ch-hero-blob--lime" aria-hidden="true" />
             <span className="ch-hero-blob ch-hero-blob--purple" aria-hidden="true" />
-            <img src="/images/Chorify/homepage.png" alt="Chorify home screen on a phone, showing today’s task, shortcuts, weekly progress and recent activity" width="948" height="1659" fetchPriority="high" />
+            <img src={publicAsset('/images/Chorify/homepage.png')} alt="Chorify home screen on a phone, showing today’s task, shortcuts, weekly progress and recent activity" width="948" height="1659" fetchPriority="high" />
           </figure>
         </header>
 
@@ -2003,7 +2005,7 @@ function ChorifyPage() {
                 <p>Pick a game, play <strong>Rock Paper Scissors</strong>, then see <strong>who does which chore</strong> and the <strong>updated schedule</strong>.</p>
               </div>
               <figure className="ch-games ch-tone-lime">
-                <img src="/images/Chorify/pierre_feuille_ciseaux.png" alt="Three Chorify screens: choosing a game, a Rock Paper Scissors round, and the result with the updated schedule" width="1536" height="1024" loading="lazy" />
+                <img src={publicAsset('/images/Chorify/pierre_feuille_ciseaux.png')} alt="Three Chorify screens: choosing a game, a Rock Paper Scissors round, and the result with the updated schedule" width="1536" height="1024" loading="lazy" />
               </figure>
             </article>
 
@@ -2014,8 +2016,8 @@ function ChorifyPage() {
         <ChPaperSection />
 
         <nav className="food-case-pagination ch-pagination" aria-label="Project navigation">
-          <a href="/projects">← All projects</a>
-          <a href="/projects/mylibrary">Next project <ArrowIcon /></a>
+          <a href={sitePath('/projects')}>← All projects</a>
+          <a href={sitePath('/projects/mylibrary')}>Next project <ArrowIcon /></a>
           <a href="#top">Back to top ↑</a>
         </nav>
       </main>
@@ -2031,7 +2033,9 @@ function ChorifyPage() {
 }
 
 function App() {
-  const pathname = window.location.pathname.replace(/\/+$/, '') || '/'
+  const basePath = import.meta.env.BASE_URL.replace(/\/+$/, '')
+  const browserPath = window.location.pathname
+  const pathname = (browserPath.startsWith(`${basePath}/`) ? browserPath.slice(basePath.length) : browserPath).replace(/\/+$/, '') || '/'
   const projectsPage = pathname === '/projects'
   const foodCharmPage = pathname === '/projects/food-charm'
   const posterPalPage = pathname === '/projects/posterpal'

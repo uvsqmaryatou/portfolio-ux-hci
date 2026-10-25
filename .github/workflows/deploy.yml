@@ -1,4 +1,4 @@
-
+﻿
 name: Deploy portfolio to GitHub Pages
 
 on:
@@ -36,6 +36,9 @@ jobs:
 
       - name: Build
         run: npm run build
+
+      - name: Add GitHub Pages SPA fallback
+        run: cp dist/index.html dist/404.html
 
       - name: Upload site
         uses: actions/upload-pages-artifact@v3

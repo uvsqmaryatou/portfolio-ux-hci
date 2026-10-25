@@ -1,4 +1,6 @@
+﻿import { publicAsset } from './publicAsset.js'
 import { useEffect, useRef, useState } from 'react'
+import { sitePath } from './sitePath.js'
 import { Footer, SiteHeader } from './Classic.jsx'
 
 const museumNav = [
@@ -58,25 +60,25 @@ function SectionNav({ items }) {
 
 const japaneseGallery = [
   {
-    src: "/images/VR%20museum/JAP%27.png",
+    src: publicAsset('/images/VR%20museum/JAP%27.png'),
     alt: 'Wide view through the Japanese exhibition, with timber framing, shoji-style walls, tatami mats, and display pedestals.',
     caption: 'A clear central route through the exhibition',
     className: 'museum-gallery-wide',
   },
   {
-    src: '/images/VR%20museum/jap.png',
+    src: publicAsset('/images/VR%20museum/jap.png'),
     alt: 'Framed artwork and collectible objects displayed against the shoji-style wall.',
     caption: 'Artworks and objects along the shoji walls',
     className: 'museum-gallery-tall',
   },
   {
-    src: '/images/VR%20museum/JAP3.png',
+    src: publicAsset('/images/VR%20museum/JAP3.png'),
     alt: 'A view along the Japanese gallery showing framed artworks, tatami flooring, timber beams, and display pedestals.',
     caption: 'Timber structure, wall pieces, and tatami flooring',
     className: 'museum-gallery-wide',
   },
   {
-    src: '/images/VR%20museum/jap2.png',
+    src: publicAsset('/images/VR%20museum/jap2.png'),
     alt: 'Collectible swords displayed on wooden exhibition shelves.',
     caption: 'Selected artifacts on the display shelves',
     className: 'museum-gallery-tall',
@@ -89,12 +91,12 @@ export default function VRMuseumPage() {
       <SiteHeader projectsPage />
       <main className="vr-museum-page">
         <nav className="case-breadcrumb" aria-label="Breadcrumb">
-          <a href="/">Home</a><span aria-hidden="true">/</span><a href="/projects">Projects</a><span aria-hidden="true">/</span><span aria-current="page">VR Museum</span>
+          <a href={sitePath('/')}>Home</a><span aria-hidden="true">/</span><a href={sitePath('/projects')}>Projects</a><span aria-hidden="true">/</span><span aria-current="page">VR Museum</span>
         </nav>
 
         <header className="museum-hero" id="museum-top">
           <div className="museum-hero-copy">
-            <p className="museum-eyebrow">COLLABORATIVE PROJECT · UNITY · VIRTUAL REALITY</p>
+            <p className="museum-eyebrow">COLLABORATIVE PROJECT Â· UNITY Â· VIRTUAL REALITY</p>
             <h1>VR <em>Museum</em></h1>
             <p className="museum-subtitle">Designing an immersive Japanese exhibition in virtual reality.</p>
             <p className="museum-intro">A collaborative Unity museum bringing together <strong>three themed spaces</strong>: Japan, Marvel / Star Wars, and video games. My personal contribution focused on designing and developing the <strong>Japanese exhibition room</strong>.</p>
@@ -110,11 +112,11 @@ export default function VRMuseumPage() {
           </div>
           <figure className="museum-hero-image">
             <img
-              src="/images/VR%20museum/Capture%20d%27%C3%A9cran%202026-09-28%20181002.png"
+              src={publicAsset('/images/VR%20museum/Capture%20d%27%C3%A9cran%202026-09-28%20181002.png')}
               alt="Preview of the Japanese exhibition room in the VR museum, with tatami flooring, shoji-style walls, and display pedestals."
               fetchPriority="high"
             />
-            <figcaption>Japanese exhibition · in-experience view</figcaption>
+            <figcaption>Japanese exhibition Â· in-experience view</figcaption>
           </figure>
         </header>
 
@@ -131,14 +133,14 @@ export default function VRMuseumPage() {
             </ul>
           </div>
           <figure className="museum-context-image">
-            <img src="/images/VR%20museum/image.png" alt="Unity scene view of the complete Japanese room, showing the tatami layout, central pedestals, wall displays, and timber framing." loading="lazy" />
-            <figcaption>Complete room layout · Japanese exhibition</figcaption>
+            <img src={publicAsset('/images/VR%20museum/image.png')} alt="Unity scene view of the complete Japanese room, showing the tatami layout, central pedestals, wall displays, and timber framing." loading="lazy" />
+            <figcaption>Complete room layout Â· Japanese exhibition</figcaption>
           </figure>
         </section>
 
         <section className="museum-gallery" id="museum-japanese" aria-labelledby="museum-gallery-title">
           <div className="museum-section-heading">
-            <p className="museum-eyebrow">02 / MY CONTRIBUTION · JAPANESE ROOM</p>
+            <p className="museum-eyebrow">02 / MY CONTRIBUTION Â· JAPANESE ROOM</p>
             <h2 id="museum-gallery-title">A room for <em>discovery.</em></h2>
             <p>The <strong>open central route</strong> leads visitors past the displays, while artworks and objects remain visible around the room.</p>
           </div>
@@ -174,11 +176,11 @@ export default function VRMuseumPage() {
               </div>
               <div className="museum-work-pair">
                 <figure>
-                  <img src="/images/VR%20museum/jap2.png" alt="The wooden shelf I modelled from scratch, displaying swords and other artifacts." loading="lazy" />
+                  <img src={publicAsset('/images/VR%20museum/jap2.png')} alt="The wooden shelf I modelled from scratch, displaying swords and other artifacts." loading="lazy" />
                   <figcaption>Sword shelf</figcaption>
                 </figure>
                 <figure>
-                  <img src="/images/VR%20museum/jap.png" alt="Pedestals and cases I modelled from scratch for the Japanese room exhibits." loading="lazy" />
+                  <img src={publicAsset('/images/VR%20museum/jap.png')} alt="Pedestals and cases I modelled from scratch for the Japanese room exhibits." loading="lazy" />
                   <figcaption>Display pedestals</figcaption>
                 </figure>
               </div>
@@ -190,7 +192,7 @@ export default function VRMuseumPage() {
                 <p>I used <strong>Blender</strong> to texture and color the swords and other objects on display.</p>
               </div>
               <figure className="museum-work-single-image">
-                <img src="/images/VR%20museum/JAP3.png" alt="Textured objects and framed artwork arranged in the Japanese exhibition." loading="lazy" />
+                <img src={publicAsset('/images/VR%20museum/JAP3.png')} alt="Textured objects and framed artwork arranged in the Japanese exhibition." loading="lazy" />
                 <figcaption>Exhibited objects in the finished room</figcaption>
               </figure>
             </article>
@@ -201,7 +203,7 @@ export default function VRMuseumPage() {
                 <p>I found the <strong>Japanese room itself</strong> on Sketchfab and arranged my original exhibits within it.</p>
               </div>
               <figure className="museum-work-single-image">
-                <img src="/images/VR%20museum/image.png" alt="Japanese room environment sourced from Sketchfab, with the exhibition arranged in Unity." loading="lazy" />
+                <img src={publicAsset('/images/VR%20museum/image.png')} alt="Japanese room environment sourced from Sketchfab, with the exhibition arranged in Unity." loading="lazy" />
                 <figcaption>Room asset arranged in Unity</figcaption>
               </figure>
             </article>
@@ -215,11 +217,11 @@ export default function VRMuseumPage() {
             <p>A recorded tour of the collaborative museum and its themed spaces.</p>
           </div>
           <figure className="museum-tour-video">
-            <video controls preload="metadata" poster="/images/VR%20museum/Capture%20d%27%C3%A9cran%202026-09-28%20181002.png" aria-label="Tour of the complete collaborative VR museum">
-              <source src="/images/VR%20museum/museum_tour%20%281%29.mp4" type="video/mp4" />
+            <video controls preload="metadata" poster={publicAsset('/images/VR%20museum/Capture%20d%27%C3%A9cran%202026-09-28%20181002.png')} aria-label="Tour of the complete collaborative VR museum">
+              <source src={publicAsset('/images/VR%20museum/museum_tour%20%281%29.mp4')} type="video/mp4" />
               Your browser does not support embedded video.
             </video>
-            <figcaption>VR Museum · complete collaborative tour</figcaption>
+            <figcaption>VR Museum Â· complete collaborative tour</figcaption>
           </figure>
         </section>
 
@@ -232,16 +234,16 @@ export default function VRMuseumPage() {
           <div className="museum-simon-media">
             <figure className="museum-simon-screenshot">
               <div className="museum-simon-frame">
-                <img src="/images/VR%20museum/Capture%20d%27%C3%A9cran%202026-09-28%20181146.png" alt="The Simon Says color-sequence game displayed on the Japanese room's shoji wall." loading="lazy" />
+                <img src={publicAsset('/images/VR%20museum/Capture%20d%27%C3%A9cran%202026-09-28%20181146.png')} alt="The Simon Says color-sequence game displayed on the Japanese room's shoji wall." loading="lazy" />
               </div>
-              <figcaption>Simon Says · in-room game view</figcaption>
+              <figcaption>Simon Says Â· in-room game view</figcaption>
             </figure>
             <figure className="museum-simon-video">
-              <video controls preload="metadata" poster="/images/VR%20museum/Capture%20d%27%C3%A9cran%202026-09-28%20181146.png" aria-label="Video of the Simon Says game">
-                <source src="/images/VR%20museum/game%20%281%29.mp4" type="video/mp4" />
+              <video controls preload="metadata" poster={publicAsset('/images/VR%20museum/Capture%20d%27%C3%A9cran%202026-09-28%20181146.png')} aria-label="Video of the Simon Says game">
+                <source src={publicAsset('/images/VR%20museum/game%20%281%29.mp4')} type="video/mp4" />
                 Your browser does not support embedded video.
               </video>
-              <figcaption>Simon Says · gameplay video</figcaption>
+              <figcaption>Simon Says Â· gameplay video</figcaption>
             </figure>
           </div>
         </section>
@@ -249,18 +251,18 @@ export default function VRMuseumPage() {
         <section className="museum-reflection" id="museum-reflection" aria-labelledby="museum-reflection-title">
           <p className="museum-eyebrow">06 / REFLECTION</p>
           <h2 id="museum-reflection-title">Making space for <em>objects.</em></h2>
-          <p>Designing an exhibition for VR made <strong>spatial composition</strong> central to the work. The room needed to feel coherent while keeping each artwork and collectible visible from the visitor’s viewpoint. A consistent palette of <strong>wood, shoji grids, and tatami</strong> brings the different displays together.</p>
+          <p>Designing an exhibition for VR made <strong>spatial composition</strong> central to the work. The room needed to feel coherent while keeping each artwork and collectible visible from the visitorâ€™s viewpoint. A consistent palette of <strong>wood, shoji grids, and tatami</strong> brings the different displays together.</p>
         </section>
 
         <figure className="museum-closing-image">
-          <img src="/images/VR%20museum/JAP%27.png" alt="Wide view of the Japanese exhibition's tatami room, wooden architecture, and display pedestals." loading="lazy" />
-          <figcaption>Japanese exhibition · VR Museum</figcaption>
+          <img src={publicAsset('/images/VR%20museum/JAP%27.png')} alt="Wide view of the Japanese exhibition's tatami room, wooden architecture, and display pedestals." loading="lazy" />
+          <figcaption>Japanese exhibition Â· VR Museum</figcaption>
         </figure>
 
         <nav className="food-case-pagination museum-pagination" aria-label="Project navigation">
-          <a href="/projects">← All projects</a>
-          <a href="/projects/zoom-promax">Next project · ZoomEvenMore →</a>
-          <a href="#museum-top">Back to top ↑</a>
+          <a href={sitePath('/projects')}>â† All projects</a>
+          <a href={sitePath('/projects/zoom-promax')}>Next project Â· ZoomEvenMore â†’</a>
+          <a href="#museum-top">Back to top â†‘</a>
         </nav>
       </main>
       <Footer />

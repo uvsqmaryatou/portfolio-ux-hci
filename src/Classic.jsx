@@ -1,9 +1,10 @@
-import { useState } from 'react'
+﻿import { useState } from 'react'
 import { allProjects, featuredProjects, processSteps } from './data/portfolio.js'
+import { sitePath } from './sitePath.js'
 
 const contactLinks = [
   { label: 'Email', display: 'maryatou.kante@gmail.com', value: 'mailto:maryatou.kante@gmail.com' },
-  { label: 'LinkedIn', display: 'LinkedIn profile ↗', value: 'https://www.linkedin.com/in/maryatou-kante-46863a259/' },
+  { label: 'LinkedIn', display: 'LinkedIn profile â†—', value: 'https://www.linkedin.com/in/maryatou-kante-46863a259/' },
 ]
 
 const chips = [
@@ -29,7 +30,7 @@ const skillGroups = [
   {
     title: 'Development & Tools',
     tone: 'skills-sage',
-    skills: ['Unity', 'C#', 'HTML, CSS & JavaScript', 'Python', 'Figma', 'Blender · currently exploring'],
+    skills: ['Unity', 'C#', 'HTML, CSS & JavaScript', 'Python', 'Figma', 'Blender Â· currently exploring'],
   },
   {
     title: 'Soft Skills',
@@ -48,9 +49,9 @@ function ArrowIcon() {
 
 export function SiteHeader({ projectsPage }) {
   const [menuOpen, setMenuOpen] = useState(false)
-  const homeHref = projectsPage ? '/#home' : '#home'
-  const aboutHref = projectsPage ? '/#about' : '#about'
-  const contactHref = projectsPage ? '/#contact' : '#contact'
+  const homeHref = projectsPage ? `${sitePath('/')}#home` : '#home'
+  const aboutHref = projectsPage ? `${sitePath('/')}#about` : '#about'
+  const contactHref = projectsPage ? `${sitePath('/')}#contact` : '#contact'
 
   return (
     <header className="site-header" id="top">
@@ -74,7 +75,7 @@ export function SiteHeader({ projectsPage }) {
         aria-label="Main navigation"
       >
         <a href={homeHref} aria-current={!projectsPage ? 'page' : undefined} onClick={() => setMenuOpen(false)}>Home</a>
-        <a href="/projects" aria-current={projectsPage ? 'page' : undefined} onClick={() => setMenuOpen(false)}>My Projects</a>
+        <a href={sitePath('/projects')} aria-current={projectsPage ? 'page' : undefined} onClick={() => setMenuOpen(false)}>My Projects</a>
         <a href={aboutHref} onClick={() => setMenuOpen(false)}>About</a>
         <a href={contactHref} onClick={() => setMenuOpen(false)}>Contact</a>
       </nav>
@@ -85,16 +86,16 @@ export function SiteHeader({ projectsPage }) {
 export function Footer() {
   return (
     <footer className="site-footer">
-      <span>© 2026 Maryatou Kante</span>
-      <span>Human-computer interaction · UX/UI design</span>
-      <a className="back-to-top" href="#top">Back to top ↑</a>
+      <span>Â© 2026 Maryatou Kante</span>
+      <span>Human-computer interaction Â· UX/UI design</span>
+      <a className="back-to-top" href="#top">Back to top â†‘</a>
     </footer>
   )
 }
 
 function ProjectCard({ project }) {
   return (
-    <a className="project-card" id={project.slug} href={project.detailPath}>
+    <a className="project-card" id={project.slug} href={sitePath(project.detailPath)}>
       <div className={`project-image project-image--${project.art}`}>
         <img className="project-preview-image" src={project.image} alt="" loading="lazy" />
       </div>
@@ -117,7 +118,7 @@ function Hero() {
   return (
     <section className="hero" id="home">
       <div className="hero-copy">
-        <p className="eyebrow">Maryatou Kante · HCI / UX</p>
+        <p className="eyebrow">Maryatou Kante Â· HCI / UX</p>
         <h1>Designing between people <span>&amp; technology.</span></h1>
         <p className="hero-intro">
           Understanding people, exploring interactions, and shaping digital experiences with care.
@@ -144,7 +145,7 @@ function WorkSection() {
       <div className="project-grid">
         {featuredProjects.map((project) => <ProjectCard key={project.slug} project={project} />)}
       </div>
-      <a className="see-more-link" href="/projects">
+      <a className="see-more-link" href={sitePath('/projects')}>
         <span>See all projects</span>
         <ArrowIcon />
       </a>
@@ -165,10 +166,10 @@ function AboutSection() {
         <span className="about-blob about-blob--c" aria-hidden="true" />
         <div className="about-copy">
           <p>
-            I’m a Master’s student in <mark>Human-Computer Interaction</mark> at Université Paris-Saclay, interested in exploring the relationship between people, technology, and the world around us. My approach combines <mark className="mark-pink">research, critical thinking, and creative experimentation</mark> to design meaningful interactive experiences. I’m fascinated by understanding human behaviours, questioning everyday interactions, and exploring how research can inform design decisions.
+            Iâ€™m a Masterâ€™s student in <mark>Human-Computer Interaction</mark> at UniversitÃ© Paris-Saclay, interested in exploring the relationship between people, technology, and the world around us. My approach combines <mark className="mark-pink">research, critical thinking, and creative experimentation</mark> to design meaningful interactive experiences. Iâ€™m fascinated by understanding human behaviours, questioning everyday interactions, and exploring how research can inform design decisions.
           </p>
           <p>
-            Beyond HCI, I’m an avid reader with a love for <mark className="mark-amber">art, biology, and sociology</mark>. I’m curious about how people think, how living systems work, and how societies shape our experiences. These diverse interests constantly feed my curiosity and influence the way I observe, question, and approach design.
+            Beyond HCI, Iâ€™m an avid reader with a love for <mark className="mark-amber">art, biology, and sociology</mark>. Iâ€™m curious about how people think, how living systems work, and how societies shape our experiences. These diverse interests constantly feed my curiosity and influence the way I observe, question, and approach design.
           </p>
         </div>
         <ul className="about-chips" aria-label="Interests">
@@ -225,7 +226,7 @@ function ContactSection() {
       <div className="contact-layout">
         <div>
           <p className="eyebrow">Contact</p>
-          <h2>Let’s make something <span>meaningful.</span></h2>
+          <h2>Letâ€™s make something <span>meaningful.</span></h2>
         </div>
       </div>
       <ul className="contact-links" id="contact-links" aria-label="Contact links">

@@ -1,4 +1,4 @@
-.zen-rooms-shell {
+﻿.zen-rooms-shell {
   --zen-ink: #201e1b;
   --zen-muted: #706a61;
   --zen-line: #e8e2d7;
@@ -158,7 +158,7 @@
 .zen-hero-image::after {
   z-index: 0;
   inset: -18px;
-  background: url('/images/ZenRooms/preview.png') center 48% / cover no-repeat;
+  background: var(--zen-hero-background) center 48% / cover no-repeat;
   filter: blur(16px);
   mask-image: linear-gradient(90deg, #000 0%, #000 27%, rgb(0 0 0 / 78%) 38%, transparent 63%);
   opacity: 0.95;
@@ -529,7 +529,7 @@
   top: 22px;
   right: 14px;
   color: var(--zen-gold);
-  content: '→';
+  content: 'â†’';
   font-size: 22px;
   font-weight: 700;
   animation: zen-arrow-nudge 1.6s ease-in-out infinite;
@@ -975,7 +975,7 @@
 .zen-feature-list li::before {
   margin-right: 9px;
   color: #d8c29a;
-  content: '—';
+  content: 'â€”';
 }
 
 .zen-feedback {

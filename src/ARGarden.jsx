@@ -1,4 +1,6 @@
+﻿import { publicAsset } from './publicAsset.js'
 import { useEffect, useRef, useState } from 'react'
+import { sitePath } from './sitePath.js'
 import { Footer, SiteHeader } from './Classic.jsx'
 
 const arGardenNav = [
@@ -68,22 +70,22 @@ const technologies = [
 
 const gardenGallery = [
   {
-    src: "/images/AR%20Garden/Capture%20d%27%C3%A9cran%202026-10-14%20205226.png",
+    src: publicAsset('/images/AR%20Garden/Capture%20d%27%C3%A9cran%202026-10-14%20205226.png'),
     alt: 'The AR garden viewed through a camera, with flowers, stepping stones, and a planting prompt.',
     title: 'Explore the garden',
   },
   {
-    src: "/images/AR%20Garden/Capture%20d%27%C3%A9cran%202026-10-14%20205354.png",
+    src: publicAsset('/images/AR%20Garden/Capture%20d%27%C3%A9cran%202026-10-14%20205354.png'),
     alt: 'A virtual shovel appears over the garden during an interaction.',
     title: 'Use garden tools',
   },
   {
-    src: "/images/AR%20Garden/Capture%20d%27%C3%A9cran%202026-10-14%20210256.png",
+    src: publicAsset('/images/AR%20Garden/Capture%20d%27%C3%A9cran%202026-10-14%20210256.png'),
     alt: 'A virtual watering can appears over the AR garden.',
     title: 'Water the plants',
   },
   {
-    src: "/images/AR%20Garden/Capture%20d%27%C3%A9cran%202026-10-14%20210421.png",
+    src: publicAsset('/images/AR%20Garden/Capture%20d%27%C3%A9cran%202026-10-14%20210421.png'),
     alt: 'The garden with flowers and a watering can placed in the scene.',
     title: 'Watch the garden grow',
   },
@@ -95,12 +97,12 @@ export default function ARGardenPage() {
       <SiteHeader projectsPage />
       <main className="ar-garden-page">
         <nav className="case-breadcrumb" aria-label="Breadcrumb">
-          <a href="/">Home</a><span aria-hidden="true">/</span><a href="/projects">Projects</a><span aria-hidden="true">/</span><span aria-current="page">AR Garden</span>
+          <a href={sitePath('/')}>Home</a><span aria-hidden="true">/</span><a href={sitePath('/projects')}>Projects</a><span aria-hidden="true">/</span><span aria-current="page">AR Garden</span>
         </nav>
 
         <header className="ar-garden-hero" id="ar-garden-top">
           <div className="ar-garden-hero-copy">
-            <p className="ar-garden-eyebrow">IMMERSIVE EXPERIENCE · HUMAN-COMPUTER INTERACTION</p>
+            <p className="ar-garden-eyebrow">IMMERSIVE EXPERIENCE Â· HUMAN-COMPUTER INTERACTION</p>
             <h1>AR <span>Garden</span></h1>
             <p className="ar-garden-subtitle">Bringing gardening into an interactive virtual world.</p>
             <div className="ar-garden-tags" aria-label="Project technologies and themes">
@@ -116,11 +118,11 @@ export default function ARGardenPage() {
           </div>
           <figure className="ar-garden-hero-image">
             <img
-              src="/images/AR%20Garden/image.png"
+              src={publicAsset('/images/AR%20Garden/image.png')}
               alt="Full view of the 3D garden with cherry blossom trees, grass, a stone fountain, stepping-stone paths, flowers, and a wooden fence."
               fetchPriority="high"
             />
-            <figcaption>AR Garden · 3D environment</figcaption>
+            <figcaption>AR Garden Â· 3D environment</figcaption>
           </figure>
         </header>
 
@@ -146,7 +148,7 @@ export default function ARGardenPage() {
             {experienceSteps.map(([number, title, description]) => (
               <li key={number}>
                 <span className="ar-garden-step-number">{number}</span>
-                <span className="ar-garden-step-icon" aria-hidden="true">{number === '01' ? '↗' : number === '02' ? '✳' : '⌁'}</span>
+                <span className="ar-garden-step-icon" aria-hidden="true">{number === '01' ? 'â†—' : number === '02' ? 'âœ³' : 'âŒ'}</span>
                 <h3>{title}</h3>
                 <p>{description}</p>
               </li>
@@ -167,7 +169,7 @@ export default function ARGardenPage() {
               <li key={name}>
                 <span className="ar-garden-tech-number">0{index + 1}</span>
                 <div><h3>{name}</h3><p>{description}</p></div>
-                <span className="ar-garden-tech-arrow" aria-hidden="true">↗</span>
+                <span className="ar-garden-tech-arrow" aria-hidden="true">â†—</span>
               </li>
             ))}
           </ul>
@@ -188,23 +190,23 @@ export default function ARGardenPage() {
               </figure>
             ))}
             <figure className="ar-garden-tools-card">
-              <img src="/images/AR%20Garden/image2.png" alt="Virtual shovel, watering can, and seeds used in the garden experience." loading="lazy" />
+              <img src={publicAsset('/images/AR%20Garden/image2.png')} alt="Virtual shovel, watering can, and seeds used in the garden experience." loading="lazy" />
               <figcaption>Gardening tools &amp; objects</figcaption>
             </figure>
             <figure className="ar-garden-video-card">
-              <video controls preload="metadata" poster="/images/AR%20Garden/image.png" aria-label="AR Garden project video">
-                <source src="/images/AR%20Garden/AR_video.mp4" type="video/mp4" />
+              <video controls preload="metadata" poster={publicAsset('/images/AR%20Garden/image.png')} aria-label="AR Garden project video">
+                <source src={publicAsset('/images/AR%20Garden/AR_video.mp4')} type="video/mp4" />
                 Your browser does not support embedded video.
               </video>
-              <figcaption>AR Garden · project video</figcaption>
+              <figcaption>AR Garden Â· project video</figcaption>
             </figure>
           </div>
         </section>
 
         <nav className="food-case-pagination ar-garden-pagination" aria-label="Project navigation">
-          <a href="/projects">← All projects</a>
-          <a href="/projects/chorify">Next project · Chorify →</a>
-          <a href="#ar-garden-top">Back to top ↑</a>
+          <a href={sitePath('/projects')}>â† All projects</a>
+          <a href={sitePath('/projects/chorify')}>Next project Â· Chorify â†’</a>
+          <a href="#ar-garden-top">Back to top â†‘</a>
         </nav>
       </main>
       <Footer />

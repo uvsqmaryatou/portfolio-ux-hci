@@ -1,4 +1,4 @@
-﻿import { publicAsset } from './publicAsset.js'
+import { publicAsset } from './publicAsset.js'
 import { sitePath } from './sitePath.js'
 import { useEffect, useRef, useState } from 'react'
 import './App.css'

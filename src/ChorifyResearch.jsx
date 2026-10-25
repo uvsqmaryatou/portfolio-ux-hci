@@ -1,4 +1,4 @@
-﻿import { publicAsset } from './publicAsset.js'
+import { publicAsset } from './publicAsset.js'
 const R = publicAsset('/images/Chorify/research/')
 const PAPER_URL = publicAsset('/images/PosterPal/Chorify_research_paper.pdf')
 const PAPER_TITLE = 'Chorify: A Phygital Approach to Fair and Engaging Chore Distribution'
@@ -14,8 +14,8 @@ const pillars = [
       'Gendered assumptions about who manages the home.',
     ],
     excerpts: [
-      ['Hochschild & Machung', 'Even in dual-earner homes, domestic labour stays skewed: the â€œsecond shiftâ€.'],
-      ['Barigozzi et al. (2025)', 'Mental load is a perception gap: 27% of couples systematically under-recognise one partnerâ€™s organisational work.'],
+      ['Hochschild & Machung', 'Even in dual-earner homes, domestic labour stays skewed: the “second shift”.'],
+      ['Barigozzi et al. (2025)', 'Mental load is a perception gap: 27% of couples systematically under-recognise one partner’s organisational work.'],
       ['Cerrato & Cifre (2018)', 'Tension comes less from the volume of chores than from not acknowledging their unequal distribution.'],
     ],
   },
@@ -28,9 +28,9 @@ const pillars = [
       'Complexity, rewards, penalties and competition can backfire.',
     ],
     excerpts: [
-      ['Diefenbach & MÃ¼ssig (2019)', 'Counterproductive effects of gamification, analysed on the task manager Habitica.'],
+      ['Diefenbach & Müssig (2019)', 'Counterproductive effects of gamification, analysed on the task manager Habitica.'],
       ['Igarashi & Yokoyama (2023)', 'Kajibuntan divides chores transparently, but is purely digital and has no game mechanics.'],
-      ['Rumsamrong & Chiou (2021)', 'Embedding disputes in small game â€œarenasâ€ can reduce resentment.'],
+      ['Rumsamrong & Chiou (2021)', 'Embedding disputes in small game “arenas” can reduce resentment.'],
     ],
   },
   {
@@ -60,7 +60,7 @@ const references = [
   ['Hochschild & Machung (2012)', 'The Second Shift', null],
   ['Barigozzi et al. (2025)', 'Beyond Time: Unveiling the Invisible Burden of Mental Load', 'https://doi.org/10.48550/arXiv.2505.11426'],
   ['Cerrato & Cifre (2018)', 'Gender Inequality in Household Chores and Work-Family Conflict', 'https://doi.org/10.3389/fpsyg.2018.01330'],
-  ['Diefenbach & MÃ¼ssig (2019)', 'Counterproductive Effects of Gamification: The Gamified Task Manager Habitica', 'https://doi.org/10.1016/j.ijhcs.2018.09.004'],
+  ['Diefenbach & Müssig (2019)', 'Counterproductive Effects of Gamification: The Gamified Task Manager Habitica', 'https://doi.org/10.1016/j.ijhcs.2018.09.004'],
   ['Igarashi & Yokoyama (2023)', 'Kajibuntan: A House Chore Division App', 'https://doi.org/10.1609/aaai.v37i13.27075'],
   ['Deterding et al. (2011)', 'From Game Design Elements to Gamefulness: Defining Gamification', 'https://doi.org/10.1145/2181037.2181040'],
   ['Rumsamrong & Chiou (2021)', 'Gamification in Conflict Resolution Using Scaled Down Arenas', 'https://doi.org/10.1109/CSDE53843.2021.9718467'],
@@ -97,7 +97,7 @@ const dimensions = [
   ['Agency', 'How much control users have over their tasks and decisions.'],
   ['Social interaction', 'The extent to which the system supports collaborative or competitive interaction.'],
   ['Familiarity', 'How recognisable and easy to understand the interaction model is.'],
-  ['Visibility of effort', 'How clearly household members can see one anotherâ€™s contributions.'],
+  ['Visibility of effort', 'How clearly household members can see one another’s contributions.'],
 ]
 
 const pairs = [
@@ -134,7 +134,7 @@ const worked = [
 const didnt = [
   <>The <strong>purpose of tokens</strong> was unclear.</>,
   'The prize readjustment was confusing: what is the point for the challenger?',
-  <><strong>Misleading labels</strong>: â€œImportant Alertsâ€ read as a challenge entry.</>,
+  <><strong>Misleading labels</strong>: “Important Alerts” read as a challenge entry.</>,
   <><strong>No onboarding</strong> explaining the rules.</>,
 ]
 
@@ -221,7 +221,7 @@ export function ChResearchSection() {
             <ul>
               {references.map(([who, what, url]) => (
                 <li key={who}>
-                  <strong>{who}.</strong> {url ? <a href={url} target="_blank" rel="noopener noreferrer">{what} â†—</a> : what}
+                  <strong>{who}.</strong> {url ? <a href={url} target="_blank" rel="noopener noreferrer">{what} ↗</a> : what}
                 </li>
               ))}
             </ul>
@@ -233,7 +233,7 @@ export function ChResearchSection() {
           n="02"
           title="Understanding real household dynamics"
           description={<><strong>3 story interviews</strong> in different households: how chores are assigned and where <strong>tension</strong> appears.</>}
-          teaser={['3 household contexts', '4 insight themes', 'Research â†’ design']}
+          teaser={['3 household contexts', '4 insight themes', 'Research → design']}
         >
           <ul className="ch-contexts" aria-label="Interview contexts">
             {contexts.map((c, i) => <li key={c}><span>{i + 1}</span>{c}</li>)}
@@ -246,7 +246,7 @@ export function ChResearchSection() {
           <h4 className="ch-sub">From insight to design</h4>
           <ul className="ch-mapping">
             {mapping.map(([a, b]) => (
-              <li key={a}><span>{a}</span><i aria-hidden="true">â†’</i><strong>{b}</strong></li>
+              <li key={a}><span>{a}</span><i aria-hidden="true">→</i><strong>{b}</strong></li>
             ))}
           </ul>
           <p className="ch-note">Themes are our synthesis of the three interviews. The raw interview notes are not published here, so no participant quotations are shown.</p>
@@ -255,7 +255,7 @@ export function ChResearchSection() {
         <Module
           n="03"
           title="Where existing solutions fall short"
-          description={<>Chorifyâ€™s early concept vs <strong>Habitica</strong> and <strong>Home Tasker</strong>.</>}
+          description={<>Chorify’s early concept vs <strong>Habitica</strong> and <strong>Home Tasker</strong>.</>}
           teaser={['Chorify', 'Habitica', 'Home Tasker']}
         >
           <ul className="ch-compared">
@@ -268,7 +268,7 @@ export function ChResearchSection() {
             caption="App comparison: unique vs shared dimensions. Blue is Chorify (proposed system), orange is Habitica, green is Home Tasker."
           />
           <p className="ch-takeaway">Chorify explored a more social and interactive approach to household management, with greater emphasis on user agency and visible contributions. However, its early competitive mechanics also introduced potential conflict and additional interaction effort.</p>
-          <p className="ch-note">These ratings are our teamâ€™s initial qualitative assessment of the design space. They are not an objective benchmark or a validated user-study result.</p>
+          <p className="ch-note">These ratings are our team’s initial qualitative assessment of the design space. They are not an objective benchmark or a validated user-study result.</p>
         </Module>
 
         <Module
@@ -298,7 +298,7 @@ export function ChResearchSection() {
                 <h4>{title}</h4>
                 <p>{insight}</p>
               </div>
-              <span className="ch-pair-arrow" aria-hidden="true">â†’</span>
+              <span className="ch-pair-arrow" aria-hidden="true">→</span>
               <div className="ch-pair-response">
                 <p className="ch-pair-tag">Design response</p>
                 <p>{response}</p>
@@ -353,7 +353,7 @@ export function ChResearchSection() {
             <ul>{worked.map((w, i) => <li key={i}>{w}</li>)}</ul>
           </div>
           <div className="ch-col ch-col--bad">
-            <h4>What didnâ€™t</h4>
+            <h4>What didn’t</h4>
             <ul>{didnt.map((w, i) => <li key={i}>{w}</li>)}</ul>
           </div>
         </div>
@@ -378,9 +378,9 @@ export function ChPaperSection() {
       <div className="ch-paper-card">
         <div>
           <p className="ch-paper-title">{PAPER_TITLE}</p>
-          <p className="ch-paper-authors">Maryatou Kante, Jay Gupte, Yousra Bourguiba Â· UniversitÃ© Paris-Saclay</p>
+          <p className="ch-paper-authors">Maryatou Kante, Jay Gupte, Yousra Bourguiba · Université Paris-Saclay</p>
           <p>Chorify was developed alongside a research paper exploring how a phygital, gamified system could support fairer chore distribution and make household responsibilities more visible and engaging.</p>
-          <a className="ch-paper-button" href={PAPER_URL} target="_blank" rel="noopener noreferrer">Read the scientific paper â†—</a>
+          <a className="ch-paper-button" href={PAPER_URL} target="_blank" rel="noopener noreferrer">Read the scientific paper ↗</a>
           <p className="ch-note">Project paper (PDF). It is not presented here as peer-reviewed or formally published.</p>
         </div>
         <div>

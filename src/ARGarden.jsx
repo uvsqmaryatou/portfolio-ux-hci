@@ -1,4 +1,4 @@
-﻿import { publicAsset } from './publicAsset.js'
+import { publicAsset } from './publicAsset.js'
 import { useEffect, useRef, useState } from 'react'
 import { sitePath } from './sitePath.js'
 import { Footer, SiteHeader } from './Classic.jsx'
@@ -102,7 +102,7 @@ export default function ARGardenPage() {
 
         <header className="ar-garden-hero" id="ar-garden-top">
           <div className="ar-garden-hero-copy">
-            <p className="ar-garden-eyebrow">IMMERSIVE EXPERIENCE Â· HUMAN-COMPUTER INTERACTION</p>
+            <p className="ar-garden-eyebrow">IMMERSIVE EXPERIENCE · HUMAN-COMPUTER INTERACTION</p>
             <h1>AR <span>Garden</span></h1>
             <p className="ar-garden-subtitle">Bringing gardening into an interactive virtual world.</p>
             <div className="ar-garden-tags" aria-label="Project technologies and themes">
@@ -122,7 +122,7 @@ export default function ARGardenPage() {
               alt="Full view of the 3D garden with cherry blossom trees, grass, a stone fountain, stepping-stone paths, flowers, and a wooden fence."
               fetchPriority="high"
             />
-            <figcaption>AR Garden Â· 3D environment</figcaption>
+            <figcaption>AR Garden · 3D environment</figcaption>
           </figure>
         </header>
 
@@ -148,7 +148,7 @@ export default function ARGardenPage() {
             {experienceSteps.map(([number, title, description]) => (
               <li key={number}>
                 <span className="ar-garden-step-number">{number}</span>
-                <span className="ar-garden-step-icon" aria-hidden="true">{number === '01' ? 'â†—' : number === '02' ? 'âœ³' : 'âŒ'}</span>
+                <span className="ar-garden-step-icon" aria-hidden="true">{number === '01' ? '↗' : number === '02' ? '✳' : '✶'}</span>
                 <h3>{title}</h3>
                 <p>{description}</p>
               </li>
@@ -169,7 +169,7 @@ export default function ARGardenPage() {
               <li key={name}>
                 <span className="ar-garden-tech-number">0{index + 1}</span>
                 <div><h3>{name}</h3><p>{description}</p></div>
-                <span className="ar-garden-tech-arrow" aria-hidden="true">â†—</span>
+                <span className="ar-garden-tech-arrow" aria-hidden="true">↗</span>
               </li>
             ))}
           </ul>
@@ -198,15 +198,15 @@ export default function ARGardenPage() {
                 <source src={publicAsset('/images/AR%20Garden/AR_video.mp4')} type="video/mp4" />
                 Your browser does not support embedded video.
               </video>
-              <figcaption>AR Garden Â· project video</figcaption>
+              <figcaption>AR Garden · project video</figcaption>
             </figure>
           </div>
         </section>
 
         <nav className="food-case-pagination ar-garden-pagination" aria-label="Project navigation">
-          <a href={sitePath('/projects')}>â† All projects</a>
-          <a href={sitePath('/projects/chorify')}>Next project Â· Chorify â†’</a>
-          <a href="#ar-garden-top">Back to top â†‘</a>
+          <a href={sitePath('/projects')}>← All projects</a>
+          <a href={sitePath('/projects/chorify')}>Next project · Chorify →</a>
+          <a href="#ar-garden-top">Back to top ↑</a>
         </nav>
       </main>
       <Footer />

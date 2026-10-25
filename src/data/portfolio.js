@@ -1,4 +1,4 @@
-﻿import { publicAsset } from '../publicAsset.js'
+import { publicAsset } from '../publicAsset.js'
 const projects = [
   { slug: 'food-charm', number: '01', title: 'Food Charm', category: 'UX/UI · Food & dining', art: 'food', symbol: 'FC', image: publicAsset('/images/FoodCharm/preview.png'), detailPath: '/projects/food-charm', description: 'A connected keychain reimagining how communities share food. Explore how research, scenario mapping, and interaction design shaped a more personal and accessible food-sharing experience.' },
   { slug: 'vr-museum', number: '02', title: 'VR Museum', category: 'VR · Culture', art: 'museum', symbol: 'VM', image: publicAsset('/images/VR%20museum/Capture%20d%27%C3%A9cran%202026-09-28%20181002.png'), detailPath: '/projects/vr-museum', description: 'A collaborative Unity VR museum with three themed exhibitions. My contribution focused on the Japanese room.' },

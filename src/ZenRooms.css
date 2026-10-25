@@ -1,4 +1,4 @@
-﻿.zen-rooms-shell {
+.zen-rooms-shell {
   --zen-ink: #201e1b;
   --zen-muted: #706a61;
   --zen-line: #e8e2d7;
@@ -529,7 +529,7 @@
   top: 22px;
   right: 14px;
   color: var(--zen-gold);
-  content: 'â†’';
+  content: '→';
   font-size: 22px;
   font-weight: 700;
   animation: zen-arrow-nudge 1.6s ease-in-out infinite;
@@ -975,7 +975,7 @@
 .zen-feature-list li::before {
   margin-right: 9px;
   color: #d8c29a;
-  content: 'â€”';
+  content: '—';
 }
 
 .zen-feedback {

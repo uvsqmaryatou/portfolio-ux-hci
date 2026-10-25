@@ -1,4 +1,4 @@
-﻿import { publicAsset } from './publicAsset.js'
+import { publicAsset } from './publicAsset.js'
 import { useEffect, useRef, useState } from 'react'
 import { sitePath } from './sitePath.js'
 import { Footer, SiteHeader } from './Classic.jsx'
@@ -96,7 +96,7 @@ export default function VRMuseumPage() {
 
         <header className="museum-hero" id="museum-top">
           <div className="museum-hero-copy">
-            <p className="museum-eyebrow">COLLABORATIVE PROJECT Â· UNITY Â· VIRTUAL REALITY</p>
+            <p className="museum-eyebrow">COLLABORATIVE PROJECT · UNITY · VIRTUAL REALITY</p>
             <h1>VR <em>Museum</em></h1>
             <p className="museum-subtitle">Designing an immersive Japanese exhibition in virtual reality.</p>
             <p className="museum-intro">A collaborative Unity museum bringing together <strong>three themed spaces</strong>: Japan, Marvel / Star Wars, and video games. My personal contribution focused on designing and developing the <strong>Japanese exhibition room</strong>.</p>
@@ -116,7 +116,7 @@ export default function VRMuseumPage() {
               alt="Preview of the Japanese exhibition room in the VR museum, with tatami flooring, shoji-style walls, and display pedestals."
               fetchPriority="high"
             />
-            <figcaption>Japanese exhibition Â· in-experience view</figcaption>
+            <figcaption>Japanese exhibition · in-experience view</figcaption>
           </figure>
         </header>
 
@@ -134,13 +134,13 @@ export default function VRMuseumPage() {
           </div>
           <figure className="museum-context-image">
             <img src={publicAsset('/images/VR%20museum/image.png')} alt="Unity scene view of the complete Japanese room, showing the tatami layout, central pedestals, wall displays, and timber framing." loading="lazy" />
-            <figcaption>Complete room layout Â· Japanese exhibition</figcaption>
+            <figcaption>Complete room layout · Japanese exhibition</figcaption>
           </figure>
         </section>
 
         <section className="museum-gallery" id="museum-japanese" aria-labelledby="museum-gallery-title">
           <div className="museum-section-heading">
-            <p className="museum-eyebrow">02 / MY CONTRIBUTION Â· JAPANESE ROOM</p>
+            <p className="museum-eyebrow">02 / MY CONTRIBUTION · JAPANESE ROOM</p>
             <h2 id="museum-gallery-title">A room for <em>discovery.</em></h2>
             <p>The <strong>open central route</strong> leads visitors past the displays, while artworks and objects remain visible around the room.</p>
           </div>
@@ -221,7 +221,7 @@ export default function VRMuseumPage() {
               <source src={publicAsset('/images/VR%20museum/museum_tour%20%281%29.mp4')} type="video/mp4" />
               Your browser does not support embedded video.
             </video>
-            <figcaption>VR Museum Â· complete collaborative tour</figcaption>
+            <figcaption>VR Museum · complete collaborative tour</figcaption>
           </figure>
         </section>
 
@@ -236,14 +236,14 @@ export default function VRMuseumPage() {
               <div className="museum-simon-frame">
                 <img src={publicAsset('/images/VR%20museum/Capture%20d%27%C3%A9cran%202026-09-28%20181146.png')} alt="The Simon Says color-sequence game displayed on the Japanese room's shoji wall." loading="lazy" />
               </div>
-              <figcaption>Simon Says Â· in-room game view</figcaption>
+              <figcaption>Simon Says · in-room game view</figcaption>
             </figure>
             <figure className="museum-simon-video">
               <video controls preload="metadata" poster={publicAsset('/images/VR%20museum/Capture%20d%27%C3%A9cran%202026-09-28%20181146.png')} aria-label="Video of the Simon Says game">
                 <source src={publicAsset('/images/VR%20museum/game%20%281%29.mp4')} type="video/mp4" />
                 Your browser does not support embedded video.
               </video>
-              <figcaption>Simon Says Â· gameplay video</figcaption>
+              <figcaption>Simon Says · gameplay video</figcaption>
             </figure>
           </div>
         </section>
@@ -251,18 +251,18 @@ export default function VRMuseumPage() {
         <section className="museum-reflection" id="museum-reflection" aria-labelledby="museum-reflection-title">
           <p className="museum-eyebrow">06 / REFLECTION</p>
           <h2 id="museum-reflection-title">Making space for <em>objects.</em></h2>
-          <p>Designing an exhibition for VR made <strong>spatial composition</strong> central to the work. The room needed to feel coherent while keeping each artwork and collectible visible from the visitorâ€™s viewpoint. A consistent palette of <strong>wood, shoji grids, and tatami</strong> brings the different displays together.</p>
+          <p>Designing an exhibition for VR made <strong>spatial composition</strong> central to the work. The room needed to feel coherent while keeping each artwork and collectible visible from the visitor’s viewpoint. A consistent palette of <strong>wood, shoji grids, and tatami</strong> brings the different displays together.</p>
         </section>
 
         <figure className="museum-closing-image">
           <img src={publicAsset('/images/VR%20museum/JAP%27.png')} alt="Wide view of the Japanese exhibition's tatami room, wooden architecture, and display pedestals." loading="lazy" />
-          <figcaption>Japanese exhibition Â· VR Museum</figcaption>
+          <figcaption>Japanese exhibition · VR Museum</figcaption>
         </figure>
 
         <nav className="food-case-pagination museum-pagination" aria-label="Project navigation">
-          <a href={sitePath('/projects')}>â† All projects</a>
-          <a href={sitePath('/projects/zoom-promax')}>Next project Â· ZoomEvenMore â†’</a>
-          <a href="#museum-top">Back to top â†‘</a>
+          <a href={sitePath('/projects')}>← All projects</a>
+          <a href={sitePath('/projects/zoom-promax')}>Next project · ZoomEvenMore →</a>
+          <a href="#museum-top">Back to top ↑</a>
         </nav>
       </main>
       <Footer />

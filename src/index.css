@@ -1,0 +1,46 @@
+:root {
+  --white: #ffffff;
+  --page-background: #ffffff;
+  --ink: #171717;
+  --secondary: #737373;
+  --violet: #6d28d9;
+  --lavender: #f5f3ff;
+  --line: #e5e5e5;
+  --heading: 'Space Grotesk', 'Segoe UI', Arial, sans-serif;
+  --body: 'Inter', 'Segoe UI', Arial, sans-serif;
+
+  font-family: var(--body);
+  color: var(--ink);
+  background: var(--page-background);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  scroll-behavior: smooth;
+  scroll-padding-top: 24px;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  background: var(--page-background);
+}
+
+button,
+a {
+  font: inherit;
+}
+
+::selection {
+  color: var(--white);
+  background: var(--violet);
+}

@@ -204,9 +204,9 @@ export default function ARGardenPage() {
         </section>
 
         <nav className="food-case-pagination ar-garden-pagination" aria-label="Project navigation">
-          <a href={sitePath('/projects')}>← All projects</a>
-          <a href={sitePath('/projects/chorify')}>Next project · Chorify →</a>
-          <a href="#ar-garden-top">Back to top ↑</a>
+          <a href={sitePath('/projects')}>All projects</a>
+          <a href={sitePath('/projects/chorify')}>Next project: Chorify</a>
+          <a href="#ar-garden-top">Back to top</a>
         </nav>
       </main>
       <Footer />

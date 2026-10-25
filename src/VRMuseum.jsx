@@ -260,9 +260,9 @@ export default function VRMuseumPage() {
         </figure>
 
         <nav className="food-case-pagination museum-pagination" aria-label="Project navigation">
-          <a href={sitePath('/projects')}>← All projects</a>
-          <a href={sitePath('/projects/zoom-promax')}>Next project · ZoomEvenMore →</a>
-          <a href="#museum-top">Back to top ↑</a>
+          <a href={sitePath('/projects')}>All projects</a>
+          <a href={sitePath('/projects/zoom-promax')}>Next project: ZoomEvenMore</a>
+          <a href="#museum-top">Back to top</a>
         </nav>
       </main>
       <Footer />

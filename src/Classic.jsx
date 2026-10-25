@@ -4,7 +4,7 @@ import { sitePath } from './sitePath.js'
 
 const contactLinks = [
   { label: 'Email', display: 'maryatou.kante@gmail.com', value: 'mailto:maryatou.kante@gmail.com' },
-  { label: 'LinkedIn', display: 'LinkedIn profile ↗', value: 'https://www.linkedin.com/in/maryatou-kante-46863a259/' },
+  { label: 'LinkedIn', display: 'LinkedIn profile', value: 'https://www.linkedin.com/in/maryatou-kante-46863a259/' },
 ]
 
 const chips = [
@@ -86,9 +86,9 @@ export function SiteHeader({ projectsPage }) {
 export function Footer() {
   return (
     <footer className="site-footer">
-      <span>© 2026 Maryatou Kante</span>
-      <span>Human-computer interaction · UX/UI design</span>
-      <a className="back-to-top" href="#top">Back to top ↑</a>
+      <span>Copyright (c) 2026 Maryatou Kante</span>
+      <span>Human-computer interaction | UX/UI design</span>
+      <a className="back-to-top" href="#top">Back to top</a>
     </footer>
   )
 }
@@ -226,7 +226,7 @@ function ContactSection() {
       <div className="contact-layout">
         <div>
           <p className="eyebrow">Contact</p>
-          <h2>Let’s make something <span>meaningful.</span></h2>
+          <h2>Let's make something <span>meaningful.</span></h2>
         </div>
       </div>
       <ul className="contact-links" id="contact-links" aria-label="Contact links">

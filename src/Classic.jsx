@@ -201,14 +201,14 @@ function AboutSection() {
             <span>Choose your preferred language.</span>
           </div>
           <div className="about-cv-links">
-            <a className="about-cv-link" href={publicAsset('/cv_fr.pdf')} target="_blank" rel="noopener noreferrer">
-              <span className="about-cv-language" aria-hidden="true">FR</span>
-              <span className="about-cv-copy"><strong>CV en français</strong><small>PDF · Ouvrir dans un nouvel onglet</small></span>
-              <span className="about-cv-format">PDF</span>
-            </a>
             <a className="about-cv-link" href={publicAsset('/cv_ang.pdf')} target="_blank" rel="noopener noreferrer">
               <span className="about-cv-language" aria-hidden="true">EN</span>
               <span className="about-cv-copy"><strong>CV in English</strong><small>PDF · Opens in a new tab</small></span>
+              <span className="about-cv-format">PDF</span>
+            </a>
+            <a className="about-cv-link" href={publicAsset('/cv_fr.pdf')} target="_blank" rel="noopener noreferrer">
+              <span className="about-cv-language" aria-hidden="true">FR</span>
+              <span className="about-cv-copy"><strong>CV en français</strong><small>PDF · Ouvrir dans un nouvel onglet</small></span>
               <span className="about-cv-format">PDF</span>
             </a>
           </div>

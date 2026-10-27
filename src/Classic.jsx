@@ -104,6 +104,7 @@ function ProjectCard({ project }) {
         <div>
           <p className="project-category">{project.category}</p>
           <h3>{project.title}</h3>
+          <p className="project-hook">{project.hook}</p>
         </div>
         <span className="project-arrow" aria-hidden="true"><ArrowIcon /></span>
       </div>
@@ -119,8 +120,9 @@ function Hero() {
   return (
     <section className="hero" id="home">
       <div className="hero-copy">
-        <p className="eyebrow">Maryatou Kante · HCI / UX</p>
-        <h1>Designing between people <span>&amp; technology.</span></h1>
+        <p className="eyebrow">HCI / UX designer</p>
+        <h1>Maryatou <span className="hero-name-accent">Kante</span></h1>
+        <p className="hero-position">Designing between people <span>&amp; technology.</span></p>
         <p className="hero-intro">
           Understanding people, exploring interactions, and shaping digital experiences with care.
         </p>

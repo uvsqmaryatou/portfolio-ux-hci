@@ -331,7 +331,7 @@ export function ChResearchSection() {
         <div className="ch-proto-block ch-proto-block--two">
           <div className="ch-proto-head">
             <p className="ch-pair-tag">Prototype 02</p>
-            <h4>A phygital card-based system</h4>
+            <h4>A phygital (physical + digital) card-based system</h4>
             <p>Physical cards made allocation tangible and interactive, while the mobile app provided tracking, scheduling and recognition. NFC was envisioned for the full system; QR codes were used as a functional substitute during the study.</p>
             <ol className="ch-steps">
               {proto2Steps.map((s) => <li key={s}>{s}</li>)}
@@ -379,7 +379,7 @@ export function ChPaperSection() {
         <div>
           <p className="ch-paper-title">{PAPER_TITLE}</p>
           <p className="ch-paper-authors">Maryatou Kante, Jay Gupte, Yousra Bourguiba · Université Paris-Saclay</p>
-          <p>Chorify was developed alongside a research paper exploring how a phygital, gamified system could support fairer chore distribution and make household responsibilities more visible and engaging.</p>
+          <p>Chorify was developed alongside a research paper exploring how a phygital (physical + digital), gamified system could support fairer chore distribution and make household responsibilities more visible and engaging.</p>
           <a className="ch-paper-button" href={PAPER_URL} target="_blank" rel="noopener noreferrer">Read the scientific paper ↗</a>
           <p className="ch-note">Project paper (PDF). It is not presented here as peer-reviewed or formally published.</p>
         </div>

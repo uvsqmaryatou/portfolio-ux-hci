@@ -1667,10 +1667,11 @@ function MyLibraryPage() {
             <dl className="ml-meta">
               <div><dt>Project type</dt><dd>Product &amp; interface design</dd></div>
               <div><dt>Role</dt><dd>Designer</dd></div>
-              <div><dt>Tools</dt><dd>Figma</dd></div>
+              <div><dt>Tools</dt><dd>Figma, HTML, CSS, JavaScript, NodeJS</dd></div>
               <div><dt>Context</dt><dd>University project</dd></div>
             </dl>
           </div>
+          <p className="ml-code-note">I also coded an early version using HTML, CSS, JavaScript, and NodeJS. <a href="https://github.com/uvsqmaryatou/MyLibrary" target="_blank" rel="noopener noreferrer">View it on GitHub.</a></p>
           <figure className="ml-hero-visual">
             <img src={publicAsset('/images/MyLibrary/homepage.png')} alt="MyLibrary homepage with a welcome banner, current reads, want-to-read list, discovery, reading goal, and friends’ activity" width="1536" height="1024" fetchPriority="high" />
           </figure>
@@ -1869,12 +1870,12 @@ const chNav = [
 ]
 
 const chInfo = [
-  ['Project type', 'Phygital chore management system'],
+  ['Project type', 'Phygital (physical + digital) chore management system'],
   ['Context', 'University project'],
   ['Role', 'Designer, Researcher'],
   ['Team', '3 designers'],
   ['Methods', 'Interviews, competitive analysis, paper prototyping, usability testing'],
-  ['Tools', 'Figma'],
+  ['Tools', 'Figma, HTML, CSS, JavaScript, NodeJS'],
 ]
 
 const chChallenge = [
@@ -1967,8 +1968,9 @@ function ChorifyPage() {
             <p className="ch-eyebrow">UX / HCI / GAMIFICATION</p>
             <h1>Chorify</h1>
             <p className="ch-headline">Rethinking how we share <em>household responsibilities.</em></p>
-            <p className="ch-lead">Chorify is a phygital chore management system. Physical chore cards with QR codes connect to a mobile app where housemates organise tasks in a shared weekly calendar, exchange chores, settle them with mini-games and earn badges.</p>
+            <p className="ch-lead">Chorify is a phygital (physical + digital) chore management system. Physical chore cards with QR codes connect to a mobile app where housemates organise tasks in a shared weekly calendar, exchange chores, settle them with mini-games and earn badges.</p>
             <p className="ch-lead">The idea is not to digitise a checklist, but to explore how physical objects, digital interfaces, social interaction and game mechanics can work together to structure responsibilities at home.</p>
+            <p className="ch-lead ch-code-note">I also coded an early version using HTML, CSS, JavaScript, and NodeJS. <a href="https://github.com/uvsqmaryatou/Chorify" target="_blank" rel="noopener noreferrer">View it on GitHub.</a></p>
           </div>
           <figure className="ch-hero-phone">
             <span className="ch-hero-blob ch-hero-blob--lime" aria-hidden="true" />

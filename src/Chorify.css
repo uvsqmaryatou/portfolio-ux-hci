@@ -80,6 +80,12 @@
   font-size: 17px;
 }
 
+.ch-code-note a {
+  color: var(--ch-purple);
+  font-weight: 700;
+  text-underline-offset: 3px;
+}
+
 .ch-hero-phone {
   position: relative;
   display: grid;

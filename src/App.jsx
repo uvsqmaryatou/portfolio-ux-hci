@@ -1968,7 +1968,7 @@ function ChorifyPage() {
             <p className="ch-eyebrow">UX / HCI / GAMIFICATION</p>
             <h1>Chorify</h1>
             <p className="ch-headline">Rethinking how we share <em>household responsibilities.</em></p>
-            <p className="ch-lead">Chorify is a phygital (physical + digital) chore management system. Physical chore cards with QR codes connect to a mobile app where housemates organise tasks in a shared weekly calendar, exchange chores, settle them with mini-games and earn badges.</p>
+            <p className="ch-lead">Chorify is a phygital (physical + digital) chore management system. Physical chore cards with NFC technology connect to a mobile app where housemates organise tasks in a shared weekly calendar, exchange chores or challenge each other with mini-games, and earn badges.</p>
             <p className="ch-lead">The idea is not to digitise a checklist, but to explore how physical objects, digital interfaces, social interaction and game mechanics can work together to structure responsibilities at home.</p>
             <p className="ch-lead ch-code-note">I also coded an early version using HTML, CSS, JavaScript, and NodeJS. <a href="https://github.com/uvsqmaryatou/Chorify" target="_blank" rel="noopener noreferrer">View it on GitHub.</a></p>
           </div>
